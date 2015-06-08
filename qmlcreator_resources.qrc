@@ -1,0 +1,128 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/fonts/editor/dejavusansmono.ttf</file>
+        <file>resources/fonts/editor/droidsansmono.ttf</file>
+        <file>resources/fonts/editor/firamono.ttf</file>
+        <file>resources/fonts/editor/liberationmono.ttf</file>
+        <file>resources/fonts/editor/sourcecodepro.ttf</file>
+        <file>resources/fonts/editor/ubuntumono.ttf</file>
+        <file>resources/fonts/ui/fontawesome.ttf</file>
+        <file>resources/fonts/ui/robotobold.ttf</file>
+        <file>resources/fonts/ui/robotobolditalic.ttf</file>
+        <file>resources/fonts/ui/robotoitalic.ttf</file>
+        <file>resources/fonts/ui/robotoregular.ttf</file>
+        <file>resources/images/icon128.png</file>
+        <file>resources/images/icon256.png</file>
+        <file>resources/images/icon512.png</file>
+        <file>resources/images/mask.png</file>
+        <file>resources/images/particle1.png</file>
+        <file>resources/images/particle2.png</file>
+        <file>resources/templates/JsFile.js</file>
+        <file>resources/templates/MainFile.qml</file>
+        <file>resources/templates/QmlFile.qml</file>
+        <file>qml/main.qml</file>
+        <file>qml/components/dialogs/BaseDialog.qml</file>
+        <file>qml/components/dialogs/ConfirmationDialog.qml</file>
+        <file>qml/components/dialogs/DialogLoader.qml</file>
+        <file>qml/components/dialogs/FontFamilyDialog.qml</file>
+        <file>qml/components/dialogs/FontSizeDialog.qml</file>
+        <file>qml/components/dialogs/ListDialog.qml</file>
+        <file>qml/components/dialogs/MessageDialog.qml</file>
+        <file>qml/components/dialogs/NewFileDialog.qml</file>
+        <file>qml/components/dialogs/NewProjectDialog.qml</file>
+        <file>qml/components/palettes/BasePalette.qml</file>
+        <file>qml/components/palettes/CutePalette.qml</file>
+        <file>qml/components/palettes/DarkPalette.qml</file>
+        <file>qml/components/palettes/LightPalette.qml</file>
+        <file>qml/components/palettes/PaletteLoader.qml</file>
+        <file>qml/components/CApplicationWindow.qml</file>
+        <file>qml/components/CBackButton.qml</file>
+        <file>qml/components/CCheckBox.qml</file>
+        <file>qml/components/CCodeArea.qml</file>
+        <file>qml/components/CContextMenuButton.qml</file>
+        <file>qml/components/CDialogButton.qml</file>
+        <file>qml/components/CEditorScrollBar.qml</file>
+        <file>qml/components/CFileButton.qml</file>
+        <file>qml/components/CFlickable.qml</file>
+        <file>qml/components/CHorizontalSeparator.qml</file>
+        <file>qml/components/CIcon.qml</file>
+        <file>qml/components/CLabel.qml</file>
+        <file>qml/components/CListView.qml</file>
+        <file>qml/components/CNavigationButton.qml</file>
+        <file>qml/components/CNavigationScrollBar.qml</file>
+        <file>qml/components/CScrollBar.qml</file>
+        <file>qml/components/CSwitcher.qml</file>
+        <file>qml/components/CSettingButton.qml</file>
+        <file>qml/components/CSlider.qml</file>
+        <file>qml/components/CTextArea.qml</file>
+        <file>qml/components/CTextField.qml</file>
+        <file>qml/components/CToolBar.qml</file>
+        <file>qml/components/CToolButton.qml</file>
+        <file>qml/components/CTooltip.qml</file>
+        <file>qml/components/CVerticalSeparator.qml</file>
+        <file>qml/screens/AboutScreen.qml</file>
+        <file>qml/screens/BlankScreen.qml</file>
+        <file>qml/screens/EditorScreen.qml</file>
+        <file>qml/screens/ExamplesScreen.qml</file>
+        <file>qml/screens/FilesScreen.qml</file>
+        <file>qml/screens/MainMenuScreen.qml</file>
+        <file>qml/screens/ModulesScreen.qml</file>
+        <file>qml/screens/PlaygroundScreen.qml</file>
+        <file>qml/screens/ProjectsScreen.qml</file>
+        <file>qml/screens/SettingsScreen.qml</file>
+        <file>qml/examples/Accelerometer/main.qml</file>
+        <file>qml/examples/Affector/main.qml</file>
+        <file>qml/examples/Ambient Light Sensor/main.qml</file>
+        <file>qml/examples/Analog Clock/Clock.qml</file>
+        <file>qml/examples/Analog Clock/ClockBackground.qml</file>
+        <file>qml/examples/Analog Clock/ClockDigits.qml</file>
+        <file>qml/examples/Analog Clock/ClockHand.qml</file>
+        <file>qml/examples/Analog Clock/main.qml</file>
+        <file>qml/examples/Available Sensors/main.qml</file>
+        <file>qml/examples/Brightness Contrast/main.qml</file>
+        <file>qml/examples/Canvas/main.qml</file>
+        <file>qml/examples/Color Dialog/main.qml</file>
+        <file>qml/examples/Controls/main.qml</file>
+        <file>qml/examples/Desaturate/main.qml</file>
+        <file>qml/examples/Directional Blur/main.qml</file>
+        <file>qml/examples/Emitter/main.qml</file>
+        <file>qml/examples/Joystick/Joystick.qml</file>
+        <file>qml/examples/Joystick/main.qml</file>
+        <file>qml/examples/Joystick/Player.qml</file>
+        <file>qml/examples/Live Webcam/main.qml</file>
+        <file>qml/examples/Live Webcam/WebcamsModel.qml</file>
+        <file>qml/examples/Local Storage/Database.js</file>
+        <file>qml/examples/Local Storage/main.qml</file>
+        <file>qml/examples/Mask Shape/main.qml</file>
+        <file>qml/examples/Message Dialog/main.qml</file>
+        <file>qml/examples/Multi-touch/main.qml</file>
+        <file>qml/examples/OpenGL Info/main.qml</file>
+        <file>qml/examples/Photo Camera/main.qml</file>
+        <file>qml/examples/Proximity Sensor/main.qml</file>
+        <file>qml/examples/Repeater/ColorRect.qml</file>
+        <file>qml/examples/Repeater/main.qml</file>
+        <file>qml/examples/Screen Info/main.qml</file>
+        <file>qml/examples/Settings/main.qml</file>
+        <file>qml/examples/Shader Effect/main.qml</file>
+        <file>qml/examples/Styles/main.qml</file>
+        <file>qml/examples/Styles/SBusyIndicator.qml</file>
+        <file>qml/examples/Swipe View/LogInScreen.qml</file>
+        <file>qml/examples/Swipe View/main.qml</file>
+        <file>qml/examples/Swipe View/RegisterScreen.qml</file>
+        <file>qml/examples/Swipe View/RestorePasswordScreen.qml</file>
+        <file>qml/examples/Swipe View/SwipeScreen.qml</file>
+        <file>qml/examples/Swipe View/SwipeView.qml</file>
+        <file>qml/examples/Table/main.qml</file>
+        <file>qml/examples/Timer/main.qml</file>
+        <file>qml/examples/Torch/main.qml</file>
+        <file>qml/examples/Transform/main.qml</file>
+        <file>qml/examples/Transform/Rect.qml</file>
+        <file>qml/examples/Video Camera/main.qml</file>
+        <file>qml/examples/WebSocket/main.qml</file>
+        <file>qml/examples/XMLHttpRequest/main.qml</file>
+        <file>resources/dictionaries/javascript.txt</file>
+        <file>resources/dictionaries/keywords.txt</file>
+        <file>resources/dictionaries/properties.txt</file>
+        <file>resources/dictionaries/qml.txt</file>
+    </qresource>
+</RCC>
