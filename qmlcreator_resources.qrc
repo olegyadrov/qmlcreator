@@ -26,6 +26,7 @@
         <file>qml/components/dialogs/DialogLoader.qml</file>
         <file>qml/components/dialogs/FontFamilyDialog.qml</file>
         <file>qml/components/dialogs/FontSizeDialog.qml</file>
+        <file>qml/components/dialogs/IndentSizeDialog.qml</file>
         <file>qml/components/dialogs/ListDialog.qml</file>
         <file>qml/components/dialogs/MessageDialog.qml</file>
         <file>qml/components/dialogs/NewFileDialog.qml</file>

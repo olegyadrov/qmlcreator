@@ -24,8 +24,17 @@ Item {
 
     property alias text: textEdit.text
     property alias selectedText: textEdit.selectedText
+    property int indentSize: 0
+
+    onIndentSizeChanged: {
+        var indentString = ""
+        for (var i = 0; i < indentSize; i++)
+            indentString += " "
+        textEdit.indentString = indentString
+    }
 
     function paste() {
+        textEdit.textChangedManually = true
         textEdit.paste()
     }
 
@@ -34,6 +43,7 @@ Item {
     }
 
     function cut() {
+        textEdit.textChangedManually = true
         textEdit.cut()
     }
 
@@ -116,11 +126,108 @@ Item {
             inputMethodHints: Qt.ImhNoPredictiveText
             activeFocusOnPress: false
 
+            property string indentString: ""
+
             property int currentLine: cursorRectangle.y / cursorRectangle.height + 1
             onCursorRectangleChanged: flickable.ensureVisible(cursorRectangle)
 
             onContentHeightChanged:
                 flickable.contentHeight = contentHeight
+
+            property bool textChangedManually: false
+            property string previousText: ""
+            onLengthChanged: {
+                if (settings.indentSize === 0)
+                    return
+
+                // This is kind of stupid workaround, we forced to do this check because TextEdit sends
+                // us "textChanged" and "lengthChanged" signals after every select() and forceActiveFocus() call
+                if (text !== previousText)
+                {
+                    if (textChangedManually)
+                    {
+                        previousText = text
+                        textChangedManually = false
+                        return
+                    }
+
+                    if (length > previousText.length)
+                    {
+                        var textBeforeCursor
+                        var openBrackets
+                        var closeBrackets
+                        var openBracketsCount
+                        var closeBracketsCount
+                        var indentLevel
+                        var indentString
+
+                        var lastCharacter = text[cursorPosition - 1]
+
+                        switch (lastCharacter)
+                        {
+                        case "\n":
+                            textBeforeCursor = text.substring(0, cursorPosition - 1)
+                            openBrackets = textBeforeCursor.match(/\{/g)
+                            closeBrackets = textBeforeCursor.match(/\}/g)
+
+                            if (openBrackets !== null)
+                            {
+                                openBracketsCount = openBrackets.length
+                                closeBracketsCount = 0
+
+                                if (closeBrackets !== null)
+                                    closeBracketsCount = closeBrackets.length
+
+                                indentLevel = openBracketsCount - closeBracketsCount
+                                indentString = new Array(indentLevel + 1).join(textEdit.indentString)
+                                textChangedManually = true
+                                insert(cursorPosition, indentString)
+                            }
+                            break
+                        case "}":
+                            var lineBreakPosition
+                            for (var i = cursorPosition - 2; i >= 0; i--)
+                            {
+                                if (text[i] !== " ")
+                                {
+                                    if (text[i] === "\n")
+                                        lineBreakPosition = i
+
+                                    break
+                                }
+                            }
+
+                            if (lineBreakPosition !== undefined)
+                            {
+                                textChangedManually = true
+                                remove(lineBreakPosition + 1, cursorPosition - 1)
+
+                                textBeforeCursor = text.substring(0, cursorPosition - 1)
+                                openBrackets = textBeforeCursor.match(/\{/g)
+                                closeBrackets = textBeforeCursor.match(/\}/g)
+
+                                if (openBrackets !== null)
+                                {
+                                    openBracketsCount = openBrackets.length
+                                    closeBracketsCount = 0
+
+                                    if (closeBrackets !== null)
+                                        closeBracketsCount = closeBrackets.length
+
+                                    indentLevel = openBracketsCount - closeBracketsCount - 1
+                                    indentString = new Array(indentLevel + 1).join(textEdit.indentString)
+                                    textChangedManually = true
+                                    insert(cursorPosition - 1, indentString)
+                                }
+                            }
+
+                            break
+                        }
+                    }
+
+                    previousText = text
+                }
+            }
 
             SyntaxHighlighter {
                 id: syntaxHighlighter
@@ -341,7 +448,7 @@ Item {
                     switch (index)
                     {
                     case 0:
-                        textEdit.paste()
+                        cCodeArea.paste()
                         break
                     }
                 }

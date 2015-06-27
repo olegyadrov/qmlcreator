@@ -95,6 +95,31 @@ BlankScreen {
             }
 
             CSettingButton {
+                text: qsTr("Indent size")
+                description: settings.indentSize.toString()
+
+                onClicked: {
+                    var parameters = {
+                        title: "Indent size",
+                        minSize: 0,
+                        maxSize: 4,
+                        currentSize: settings.indentSize
+                    }
+
+                    var callback = function(value) {
+                        if (value < parameters.minSize)
+                            settings.indentSize = parameters.minSize;
+                        else if (value > parameters.maxSize)
+                            settings.indentSize = parameters.maxSize;
+                        else
+                            settings.indentSize = value;
+                    }
+
+                    dialog.open(dialog.types.indentSize, parameters, callback)
+                }
+            }
+
+            CSettingButton {
                 text: qsTr("Palette")
                 description: settings.palette
                 onClicked: {

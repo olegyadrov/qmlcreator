@@ -63,6 +63,7 @@ ApplicationWindow {
         property string font: "Ubuntu Mono"
         property int fontSize: 40
         property string palette: "Cute"
+        property int indentSize: 4
 
         // internal
         property bool debugMode: false
@@ -79,6 +80,7 @@ ApplicationWindow {
         property alias font: settings.font
         property alias fontSize: settings.fontSize
         property alias palette: settings.palette
+        property alias indentSize: settings.indentSize
         property alias firstRun: settings.firstRun
     }
 

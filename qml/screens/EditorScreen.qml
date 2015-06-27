@@ -107,6 +107,8 @@ BlankScreen {
         anchors.left: parent.left
         anchors.right: parent.right
 
+        indentSize: settings.indentSize
+
         text: projectManager.getFileContent()
     }
 }

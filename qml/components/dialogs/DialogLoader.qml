@@ -36,6 +36,7 @@ Loader {
         property string list: "ListDialog.qml"
         property string fontFamily: "FontFamilyDialog.qml"
         property string fontSize: "FontSizeDialog.qml"
+        property string indentSize: "IndentSizeDialog.qml"
         property string newFile: "NewFileDialog.qml"
         property string newProject: "NewProjectDialog.qml"
     }
