@@ -79,12 +79,12 @@
         <file>qml/examples/Analog Clock/ClockDigits.qml</file>
         <file>qml/examples/Analog Clock/ClockHand.qml</file>
         <file>qml/examples/Analog Clock/main.qml</file>
-        <file>qml/examples/Available Sensors/main.qml</file>
         <file>qml/examples/Brightness Contrast/main.qml</file>
         <file>qml/examples/Canvas/main.qml</file>
         <file>qml/examples/Color Dialog/main.qml</file>
         <file>qml/examples/Controls/main.qml</file>
         <file>qml/examples/Desaturate/main.qml</file>
+        <file>qml/examples/Device Info/main.qml</file>
         <file>qml/examples/Directional Blur/main.qml</file>
         <file>qml/examples/Emitter/main.qml</file>
         <file>qml/examples/Joystick/Joystick.qml</file>
@@ -97,12 +97,10 @@
         <file>qml/examples/Mask Shape/main.qml</file>
         <file>qml/examples/Message Dialog/main.qml</file>
         <file>qml/examples/Multi-touch/main.qml</file>
-        <file>qml/examples/OpenGL Info/main.qml</file>
         <file>qml/examples/Photo Camera/main.qml</file>
         <file>qml/examples/Proximity Sensor/main.qml</file>
         <file>qml/examples/Repeater/ColorRect.qml</file>
         <file>qml/examples/Repeater/main.qml</file>
-        <file>qml/examples/Screen Info/main.qml</file>
         <file>qml/examples/Settings/main.qml</file>
         <file>qml/examples/Shader Effect/main.qml</file>
         <file>qml/examples/Styles/main.qml</file>
