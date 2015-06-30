@@ -48,10 +48,35 @@ ApplicationWindow {
         // The Screen attached object is valid inside Item or Item derived types, after component completion
         settings.pixelDensity = settings.debugMode ? 6.0 : Screen.logicalPixelDensity
 
-        if (settings.firstRun)
-        {
+        var previousVersion = parseInt(settings.previousVersion.split(".").join(""))
+        if (previousVersion === 0)
+        { // first run
             projectManager.restoreExamples()
-            settings.firstRun = false
+            settings.previousVersion = Qt.application.version
+        }
+        else
+        {
+            var currentVersion = parseInt(Qt.application.version.split(".").join(""))
+            if (currentVersion > previousVersion)
+            {
+                var parameters = {
+                    title: qsTr("New examples"),
+                    text: qsTr("We detected that you had recently updated QML Creator on your device.") + "\n" +
+                          qsTr("We are constantly working on QML Creator improvement, and we may have added some new sample projects in the current release.") + "\n" +
+                          qsTr("Press OK if you would like to get them now (notice that all the changes you have made in the \"Examples\" section will be removed)") + "\n" +
+                          qsTr("Alternatively, you can do it later by pressing the \"Restore examples\" button in the \"Examples\" screen.")
+                }
+
+                var callback = function(value)
+                {
+                    if (value)
+                        projectManager.restoreExamples()
+
+                    settings.previousVersion = Qt.application.version
+                }
+
+                dialog.open(dialog.types.confirmation, parameters, callback)
+            }
         }
     }
 
@@ -68,7 +93,7 @@ ApplicationWindow {
         // internal
         property bool debugMode: false
         property double pixelDensity
-        property bool firstRun: true
+        property string previousVersion: "0.0.0"
         property bool desktopPlatform: Qt.platform.os === "windows" ||
                                        Qt.platform.os === "linux" ||
                                        Qt.platform.os === "osx" ||
@@ -81,7 +106,11 @@ ApplicationWindow {
         property alias fontSize: settings.fontSize
         property alias palette: settings.palette
         property alias indentSize: settings.indentSize
-        property alias firstRun: settings.firstRun
+    }
+
+    Settings {
+        category: "Version"
+        property alias previousVersion: settings.previousVersion
     }
 
     property alias settings: settings
