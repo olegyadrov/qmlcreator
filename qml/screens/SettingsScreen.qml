@@ -74,8 +74,8 @@ BlankScreen {
                     var parameters = {
                         title: "Font size",
                         text: "Preview",
-                        minSize: 20,
-                        maxSize: 80,
+                        minSize: 10,
+                        maxSize: 100,
                         currentSize: settings.fontSize
                     }
 

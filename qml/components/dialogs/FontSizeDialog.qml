@@ -26,9 +26,9 @@ BaseDialog {
 
     property alias title: titleLabel.text
     property string text
-    property int minSize: 30
-    property int maxSize: 80
-    property int currentSize: 15
+    property int minSize
+    property int maxSize
+    property int currentSize
 
     function initialize(parameters) {
         for (var attr in parameters) {
