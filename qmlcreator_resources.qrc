@@ -97,6 +97,7 @@
         <file>qml/examples/Mask Shape/main.qml</file>
         <file>qml/examples/Message Dialog/main.qml</file>
         <file>qml/examples/Multi-touch/main.qml</file>
+        <file>qml/examples/Multi-touch/TouchItem.qml</file>
         <file>qml/examples/Photo Camera/main.qml</file>
         <file>qml/examples/Proximity Sensor/main.qml</file>
         <file>qml/examples/Repeater/ColorRect.qml</file>
