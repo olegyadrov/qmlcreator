@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     app.setApplicationName("QML Creator");
-    app.setApplicationVersion("1.2.2");
+    app.setApplicationVersion("1.2.3");
     app.setOrganizationName("wearyinside");
     app.setOrganizationDomain("com.wearyinside.qmlcreator");
 
