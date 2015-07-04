@@ -129,7 +129,6 @@ Item {
             property string indentString: ""
 
             property int currentLine: cursorRectangle.y / cursorRectangle.height + 1
-            onCursorRectangleChanged: flickable.ensureVisible(cursorRectangle)
 
             onContentHeightChanged:
                 flickable.contentHeight = contentHeight
@@ -296,6 +295,10 @@ Item {
                     {
                         endPosition = newPosition
                         textEdit.select(startPosition, endPosition)
+                        if (newPosition > startPosition)
+                            flickable.ensureVisible(textEdit.positionToRectangle(textEdit.selectionEnd))
+                        else
+                            flickable.ensureVisible(textEdit.positionToRectangle(textEdit.selectionStart))
                     }
                     mouse.accepted = true
                 }
