@@ -86,7 +86,6 @@
         <file>qml/examples/Desaturate/main.qml</file>
         <file>qml/examples/Device Info/main.qml</file>
         <file>qml/examples/Directional Blur/main.qml</file>
-        <file>qml/examples/Emitter/main.qml</file>
         <file>qml/examples/Gradient Text/main.qml</file>
         <file>qml/examples/Joystick/Joystick.qml</file>
         <file>qml/examples/Joystick/main.qml</file>
