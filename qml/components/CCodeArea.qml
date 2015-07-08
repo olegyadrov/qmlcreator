@@ -157,7 +157,7 @@ Item {
                         var closeBrackets
                         var openBracketsCount
                         var closeBracketsCount
-                        var indentLevel
+                        var indentDepth
                         var indentString
 
                         var lastCharacter = text[cursorPosition - 1]
@@ -177,8 +177,8 @@ Item {
                                 if (closeBrackets !== null)
                                     closeBracketsCount = closeBrackets.length
 
-                                indentLevel = openBracketsCount - closeBracketsCount
-                                indentString = new Array(indentLevel + 1).join(textEdit.indentString)
+                                indentDepth = openBracketsCount - closeBracketsCount
+                                indentString = new Array(indentDepth + 1).join(textEdit.indentString)
                                 textChangedManually = true
                                 insert(cursorPosition, indentString)
                             }
@@ -213,8 +213,8 @@ Item {
                                     if (closeBrackets !== null)
                                         closeBracketsCount = closeBrackets.length
 
-                                    indentLevel = openBracketsCount - closeBracketsCount - 1
-                                    indentString = new Array(indentLevel + 1).join(textEdit.indentString)
+                                    indentDepth = openBracketsCount - closeBracketsCount - 1
+                                    indentString = new Array(indentDepth + 1).join(textEdit.indentString)
                                     textChangedManually = true
                                     insert(cursorPosition - 1, indentString)
                                 }
@@ -329,7 +329,10 @@ Item {
                 function select() {
                     var currentPosition = textEdit.positionAt(x + width / 2, y + height)
                     if (currentPosition < textEdit.selectionEnd)
+                    {
                         textEdit.select(currentPosition, textEdit.selectionEnd)
+                        flickable.ensureVisible(textEdit.positionToRectangle(textEdit.selectionStart))
+                    }
                 }
 
                 function setPosition() {
@@ -386,7 +389,10 @@ Item {
                 function select() {
                     var currentPosition = textEdit.positionAt(x + width / 2, y)
                     if (currentPosition > textEdit.selectionStart)
+                    {
                         textEdit.select(textEdit.selectionStart, currentPosition)
+                        flickable.ensureVisible(textEdit.positionToRectangle(textEdit.selectionEnd))
+                    }
                 }
 
                 function setPosition() {
@@ -428,6 +434,9 @@ Item {
                 }
             }
 
+            onCursorPositionChanged:
+                textEdit.contextMenu.visible = false
+
             property Item contextMenu: ListView {
                 parent: textEdit
                 visible: false
@@ -441,9 +450,9 @@ Item {
                 boundsBehavior: Flickable.StopAtBounds
 
                 model: ListModel {
-                    ListElement {
-                        text: "Paste"
-                    }
+                    ListElement { text: "Undo" }
+                    ListElement { text: "Redo" }
+                    ListElement { text: "Paste" }
                 }
 
                 function contextMenuCallback(index) {
@@ -451,6 +460,12 @@ Item {
                     switch (index)
                     {
                     case 0:
+                        textEdit.undo()
+                        break
+                    case 1:
+                        textEdit.redo()
+                        break
+                    case 2:
                         cCodeArea.paste()
                         break
                     }
@@ -491,7 +506,7 @@ Item {
 
                 function isEnoughSpaceAtBottom() {
                     var positionRectangle = textEdit.positionToRectangle(textEdit.cursorPosition)
-                    return (positionRectangle.y  + positionRectangle.height + height + margin < textEdit.height)
+                    return (positionRectangle.y  + positionRectangle.height + height + margin < cCodeArea.height)
                 }
 
                 function isEnoughSpaceAtLeft() {
