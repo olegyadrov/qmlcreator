@@ -17,6 +17,7 @@
         <file>resources/images/mask.png</file>
         <file>resources/images/particle1.png</file>
         <file>resources/images/particle2.png</file>
+        <file>resources/images/particle3.png</file>
         <file>resources/templates/JsFile.js</file>
         <file>resources/templates/MainFile.qml</file>
         <file>resources/templates/QmlFile.qml</file>
@@ -116,7 +117,7 @@
         <file>qml/examples/Timer/main.qml</file>
         <file>qml/examples/Torch/main.qml</file>
         <file>qml/examples/Transform/main.qml</file>
-        <file>qml/examples/Transform/Rect.qml</file>
+        <file>qml/examples/Transform/Snow.qml</file>
         <file>qml/examples/Video Camera/main.qml</file>
         <file>qml/examples/WebSocket/main.qml</file>
         <file>qml/examples/XMLHttpRequest/main.qml</file>
