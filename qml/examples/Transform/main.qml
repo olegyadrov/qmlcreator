@@ -8,7 +8,7 @@ Rectangle {
         GradientStop { position: 1.0; color: "#041e25" }
     }
 
-    Snow {
+    Stars {
         width: parent.width * 2
         height: parent.height * 2
         anchors.centerIn: parent

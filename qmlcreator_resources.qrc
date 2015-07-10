@@ -117,7 +117,7 @@
         <file>qml/examples/Timer/main.qml</file>
         <file>qml/examples/Torch/main.qml</file>
         <file>qml/examples/Transform/main.qml</file>
-        <file>qml/examples/Transform/Snow.qml</file>
+        <file>qml/examples/Transform/Stars.qml</file>
         <file>qml/examples/Video Camera/main.qml</file>
         <file>qml/examples/WebSocket/main.qml</file>
         <file>qml/examples/XMLHttpRequest/main.qml</file>
