@@ -501,12 +501,12 @@ Item {
 
                 function isEnoughSpaceAtTop() {
                     var positionRectangle = textEdit.positionToRectangle(textEdit.cursorPosition)
-                    return (positionRectangle.y  - height - margin > 0)
+                    return (positionRectangle.y  - height - margin > flickable.contentY)
                 }
 
                 function isEnoughSpaceAtBottom() {
                     var positionRectangle = textEdit.positionToRectangle(textEdit.cursorPosition)
-                    return (positionRectangle.y  + positionRectangle.height + height + margin < cCodeArea.height)
+                    return (positionRectangle.y  + positionRectangle.height + height + margin < flickable.contentY + flickable.height)
                 }
 
                 function isEnoughSpaceAtLeft() {
