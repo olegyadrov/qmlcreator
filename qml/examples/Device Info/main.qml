@@ -3,6 +3,7 @@ import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtSensors 5.1
+import QtMultimedia 5.4
 
 Item {
     anchors.fill: parent
@@ -59,6 +60,16 @@ Item {
         }
     }
 
+    function availableCameras() {
+        var cameras = QtMultimedia.availableCameras
+        var displayNames = []
+
+        for (var i = 0; i < cameras.length; i++)
+            displayNames.push(cameras[i].displayName)
+
+        return displayNames
+    }
+
     function refreshInfo() {
         var systemInfo = {
             "Operating System" : Qt.platform.os,
@@ -78,7 +89,8 @@ Item {
                 "Profile" : openGLProfile(),
                 "Renderable type" : openGLRenderableType()
             },
-            "Available Sensors" : QmlSensors.sensorTypes()
+            "Available Sensors" : QmlSensors.sensorTypes(),
+            "Available Cameras" : availableCameras()
         }
 
         textArea.text = JSON.stringify(systemInfo, null, 4)
