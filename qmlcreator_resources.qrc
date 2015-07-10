@@ -99,7 +99,7 @@
         <file>qml/examples/Message Dialog/main.qml</file>
         <file>qml/examples/Multi-touch/main.qml</file>
         <file>qml/examples/Multi-touch/TouchItem.qml</file>
-        <file>qml/examples/Photo Camera/main.qml</file>
+        <file>qml/examples/Camera/main.qml</file>
         <file>qml/examples/Proximity Sensor/main.qml</file>
         <file>qml/examples/Repeater/ColorRect.qml</file>
         <file>qml/examples/Repeater/main.qml</file>
@@ -118,7 +118,6 @@
         <file>qml/examples/Torch/main.qml</file>
         <file>qml/examples/Transform/main.qml</file>
         <file>qml/examples/Transform/Stars.qml</file>
-        <file>qml/examples/Video Camera/main.qml</file>
         <file>qml/examples/WebSocket/main.qml</file>
         <file>qml/examples/XMLHttpRequest/main.qml</file>
         <file>resources/dictionaries/javascript.txt</file>
