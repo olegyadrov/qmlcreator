@@ -77,7 +77,7 @@ BlankScreen {
             }
 
             CToolButton {
-                visible: !codeArea.selectedText.length > 0
+                visible: projectManager.fileFormat === "qml" && !codeArea.selectedText.length > 0
                 Layout.fillHeight: true
                 icon: "\uf04b"
                 tooltipText: qsTr("Run project")

@@ -188,7 +188,7 @@ BaseDialog {
                 }
                 else
                 {
-                    if (projectManager.isFileExists(fileName + "." + fileExtension))
+                    if (projectManager.fileExists(fileName + "." + fileExtension))
                     {
                         warningLabel.text = qsTr("The file already exists")
                         warningLabel.visible = true

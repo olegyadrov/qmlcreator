@@ -36,6 +36,7 @@ class ProjectManager : public QObject
     Q_PROPERTY(BaseFolder baseFolder MEMBER m_baseFolder READ baseFolder WRITE setBaseFolder NOTIFY baseFolderChanged)
     Q_PROPERTY(QString projectName MEMBER m_projectName READ projectName WRITE setProjectName NOTIFY projectNameChanged)
     Q_PROPERTY(QString fileName MEMBER m_fileName READ fileName WRITE setFileName NOTIFY fileNameChanged)
+    Q_PROPERTY(QString fileFormat MEMBER m_fileFormat READ fileFormat NOTIFY fileFormatChanged)
 
 public:
     explicit ProjectManager(QObject *parent = 0);
@@ -48,21 +49,22 @@ public:
     Q_INVOKABLE QStringList projects();
     Q_INVOKABLE void createProject(QString projectName);
     Q_INVOKABLE void removeProject(QString projectName);
-    Q_INVOKABLE bool isProjectExists(QString projectName);
+    Q_INVOKABLE bool projectExists(QString projectName);
     Q_INVOKABLE void restoreExamples();
 
     // current project
     QString projectName();
     void setProjectName(QString projectName);
     Q_INVOKABLE QStringList files();
-    Q_INVOKABLE QString projectMainPath();
     Q_INVOKABLE void createFile(QString fileName, QString fileExtension);
     Q_INVOKABLE void removeFile(QString fileName);
-    Q_INVOKABLE bool isFileExists(QString projectName);
+    Q_INVOKABLE bool fileExists(QString projectName);
 
     // current file
     QString fileName();
+    QString fileFormat();
     void setFileName(QString fileName);
+    Q_INVOKABLE QString getFilePath();
     Q_INVOKABLE QString getFileContent();
     Q_INVOKABLE void saveFileContent(QString content);
 
@@ -81,6 +83,7 @@ private:
 
     // current file
     QString m_fileName;
+    QString m_fileFormat;
 
     // QML engine stuff
     static QQmlApplicationEngine *m_qmlEngine;
@@ -89,6 +92,7 @@ signals:
     void baseFolderChanged();
     void projectNameChanged();
     void fileNameChanged();
+    void fileFormatChanged();
     void error(QString description);
 };
 

@@ -82,7 +82,7 @@ void ProjectManager::removeProject(QString projectName)
     dir.removeRecursively();
 }
 
-bool ProjectManager::isProjectExists(QString projectName)
+bool ProjectManager::projectExists(QString projectName)
 {
     QFileInfo checkFile(baseFolderPath(Projects) + QDir::separator() + projectName);
     return checkFile.exists();
@@ -140,16 +140,14 @@ QStringList ProjectManager::files()
     QFileInfoList files = dir.entryInfoList(QDir::Files);
 
     foreach(QFileInfo file, files) {
-        QString fileName = file.fileName();
-        projectFiles.push_back(fileName);
+        if (file.suffix() == "qml" || file.suffix() == "js")
+        {
+            QString fileName = file.fileName();
+            projectFiles.push_back(fileName);
+        }
     }
 
     return projectFiles;
-}
-
-QString ProjectManager::projectMainPath()
-{
-    return "file:///" + baseFolderPath(m_baseFolder) + QDir::separator() + m_projectName + QDir::separator() + "main.qml";
 }
 
 void ProjectManager::createFile(QString fileName, QString fileExtension)
@@ -171,7 +169,7 @@ void ProjectManager::removeFile(QString fileName)
     QDir().remove(baseFolderPath(m_baseFolder) + QDir::separator() + m_projectName + QDir::separator() + fileName);
 }
 
-bool ProjectManager::isFileExists(QString fileName)
+bool ProjectManager::fileExists(QString fileName)
 {
     QFileInfo checkFile(baseFolderPath(m_baseFolder) + QDir::separator() + m_projectName + QDir::separator() + fileName);
     return checkFile.exists();
@@ -182,13 +180,28 @@ QString ProjectManager::fileName()
     return m_fileName;
 }
 
+QString ProjectManager::fileFormat()
+{
+    return m_fileFormat;
+}
+
 void ProjectManager::setFileName(QString fileName)
 {
     if (m_fileName != fileName)
     {
+        QFileInfo fileInfo(baseFolderPath(m_baseFolder) + QDir::separator() + m_projectName + QDir::separator() + fileName);
+
         m_fileName = fileName;
+        m_fileFormat = fileInfo.suffix();
+
         emit fileNameChanged();
+        emit fileFormatChanged();
     }
+}
+
+QString ProjectManager::getFilePath()
+{
+    return "file:///" + baseFolderPath(m_baseFolder) + QDir::separator() + m_projectName + QDir::separator() + m_fileName;
 }
 
 QString ProjectManager::getFileContent()

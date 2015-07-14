@@ -33,7 +33,7 @@ BlankScreen {
         CBackButton {
             anchors.fill: parent
             enabled: !stackView.busy
-            text: projectManager.projectName
+            text: projectManager.fileName
         }
     }
 
@@ -55,7 +55,7 @@ BlankScreen {
     }
 
     Component.onCompleted: {
-        var componentUrl = projectManager.projectMainPath()
+        var componentUrl = projectManager.getFilePath()
         var playComponent = Qt.createComponent(componentUrl, Component.PreferSynchronous, playgroundScreen)
         if (playComponent.status === Component.Error)
         {
