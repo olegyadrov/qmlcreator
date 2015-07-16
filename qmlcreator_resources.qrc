@@ -48,6 +48,7 @@
         <file>qml/components/CFlickable.qml</file>
         <file>qml/components/CHorizontalSeparator.qml</file>
         <file>qml/components/CIcon.qml</file>
+        <file>qml/components/CInformationItem.qml</file>
         <file>qml/components/CLabel.qml</file>
         <file>qml/components/CListView.qml</file>
         <file>qml/components/CNavigationButton.qml</file>
@@ -124,5 +125,30 @@
         <file>resources/dictionaries/keywords.txt</file>
         <file>resources/dictionaries/properties.txt</file>
         <file>resources/dictionaries/qml.txt</file>
+        <file>qml/modules/AudioEngine.qml</file>
+        <file>qml/modules/Bluetooth.qml</file>
+        <file>qml/modules/Canvas3D.qml</file>
+        <file>qml/modules/Controls.qml</file>
+        <file>qml/modules/Dialogs.qml</file>
+        <file>qml/modules/FolderListModel.qml</file>
+        <file>qml/modules/GraphicalEffects.qml</file>
+        <file>qml/modules/Layouts.qml</file>
+        <file>qml/modules/LocalStorage.qml</file>
+        <file>qml/modules/Location.qml</file>
+        <file>qml/modules/Models.qml</file>
+        <file>qml/modules/Multimedia.qml</file>
+        <file>qml/modules/Nfc.qml</file>
+        <file>qml/modules/Particles.qml</file>
+        <file>qml/modules/Positioning.qml</file>
+        <file>qml/modules/Qml.qml</file>
+        <file>qml/modules/Quick.qml</file>
+        <file>qml/modules/Sensors.qml</file>
+        <file>qml/modules/Settings.qml</file>
+        <file>qml/modules/Styles.qml</file>
+        <file>qml/modules/Test.qml</file>
+        <file>qml/modules/WebSockets.qml</file>
+        <file>qml/modules/WebView.qml</file>
+        <file>qml/modules/Window.qml</file>
+        <file>qml/modules/XmlListModel.qml</file>
     </qresource>
 </RCC>
