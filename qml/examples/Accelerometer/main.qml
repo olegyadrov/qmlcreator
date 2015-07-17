@@ -1,63 +1,50 @@
 import QtQuick 2.4
-import QtQuick.Layouts 1.1
+import QtQuick.Window 2.2
 import QtSensors 5.1
 
 Item {
-  anchors.fill: parent
+    id: accelerometerExample
+    anchors.fill: parent
 
-  Accelerometer {
-    id: accelerometer
-    active: true
-    dataRate: 20
-  }
+    Rectangle {
+        id: ball
+        x: accelerometerExample.width / 2 - width / 2
+        y: accelerometerExample.height / 2 - height / 2
+        width: 24 * Screen.logicalPixelDensity
+        height: 24 * Screen.logicalPixelDensity
+        color: "#006224"
+        radius: width / 2
 
-  Rectangle {
-    anchors.centerIn: parent
-    width: 500
-    height: 500
-    radius: width / 2
-    border.color: "#80c342"
-    border.width: 10
-  }
-
-  Rectangle {
-    id: ball
-    width: 100
-    height: 100
-    color: "#006224"
-    radius: width / 2
-    property int centerX: parent.width / 2 - width / 2
-    property int centerY: parent.height / 2 - height / 2
-
-    Behavior on x { NumberAnimation { duration: 100 } }
-    Behavior on y { NumberAnimation { duration: 100 } }
-  }
-
-  ColumnLayout {
-    anchors.left: parent.left
-    anchors.top: parent.top
-    anchors.margins: spacing
-
-    Text {
-      id: xValueText
-      text: "x: 0"
+        Behavior on x { NumberAnimation { duration: 100 } }
+        Behavior on y { NumberAnimation { duration: 100 } }
     }
 
-    Text {
-      id: yValueText
-      text: "y: 0"
+    Accelerometer {
+        id: accelerometer
+        active: true
+        dataRate: 20
     }
-  }
 
-  Timer {
-    interval: 100
-    running: true
-    repeat: true
-    onTriggered: {
-      ball.x = ball.centerX - accelerometer.reading.x * 30
-      ball.y = ball.centerY + accelerometer.reading.y * 30
-      xValueText.text = "x: " + accelerometer.reading.x.toFixed(2)
-      yValueText.text = "y: " + accelerometer.reading.y.toFixed(2)
+    Timer {
+        interval: 100
+        running: true
+        repeat: true
+        onTriggered: {
+            var newX = ball.x - accelerometer.reading.x * Screen.logicalPixelDensity * 3
+            var newY = ball.y + accelerometer.reading.y * Screen.logicalPixelDensity * 3
+
+            if (newX + ball.width > accelerometerExample.width)
+                newX = accelerometerExample.width - ball.width
+            else if (newX < 0)
+                newX = 0
+
+            if (newY + ball.height > accelerometerExample.height)
+                newY = accelerometerExample.height - ball.height
+            else if (newY < 0)
+                newY = 0
+
+            ball.x = newX
+            ball.y = newY
+        }
     }
-  }
 }
