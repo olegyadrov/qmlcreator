@@ -4,7 +4,6 @@ import QtQuick.Window 2.2
 Canvas {
     id: canvas
     anchors.fill: parent
-    renderStrategy: Canvas.Threaded
 
     onPaint: {
         var ctx = canvas.getContext("2d")

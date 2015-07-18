@@ -114,7 +114,6 @@
         <file>qml/examples/Swipe View/RestorePasswordScreen.qml</file>
         <file>qml/examples/Swipe View/SwipeScreen.qml</file>
         <file>qml/examples/Swipe View/SwipeView.qml</file>
-        <file>qml/examples/Table/main.qml</file>
         <file>qml/examples/Timer/main.qml</file>
         <file>qml/examples/Torch/main.qml</file>
         <file>qml/examples/Transform/main.qml</file>
