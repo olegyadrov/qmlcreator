@@ -24,7 +24,7 @@ Item {
         anchors.centerIn: parent
         font.pixelSize: 80 * Screen.logicalPixelDensity
         font.family: "Roboto"
-        text: "Q"
+        text: "Qt"
         layer.enabled: true
         layer.smooth: true
         layer.samplerName: "maskSource"
