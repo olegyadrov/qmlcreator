@@ -19,4 +19,6 @@
 import QtQml 2.2
 import QtQuick.Dialogs 1.2
 
-QtObject {}
+QtObject {
+    property string version: "1.2"
+}

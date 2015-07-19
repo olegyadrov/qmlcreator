@@ -19,4 +19,6 @@
 import QtQml 2.2
 import QtWebView 1.0
 
-QtObject {}
+QtObject {
+    property string version: "1.0"
+}

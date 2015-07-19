@@ -19,4 +19,6 @@
 import QtQml 2.2
 import QtNfc 5.2
 
-QtObject {}
+QtObject {
+    property string version: "5.2"
+}

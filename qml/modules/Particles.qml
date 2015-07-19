@@ -19,4 +19,6 @@
 import QtQml 2.2
 import QtQuick.Particles 2.0
 
-QtObject {}
+QtObject {
+    property string version: "2.0"
+}

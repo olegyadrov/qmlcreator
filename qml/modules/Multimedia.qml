@@ -19,4 +19,6 @@
 import QtQml 2.2
 import QtMultimedia 5.4
 
-QtObject {}
+QtObject {
+    property string version: "5.4"
+}

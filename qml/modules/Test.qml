@@ -19,4 +19,6 @@
 import QtQml 2.2
 import QtTest 1.1
 
-QtObject {}
+QtObject {
+    property string version: "1.1"
+}

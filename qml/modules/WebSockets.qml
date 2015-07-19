@@ -17,6 +17,6 @@
 ****************************************************************************/
 
 import QtQml 2.2
-import QtWebSockets 1.0
+import Qt.WebSockets 1.0
 
 QtObject {}

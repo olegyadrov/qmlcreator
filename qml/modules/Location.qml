@@ -19,4 +19,6 @@
 import QtQml 2.2
 import QtLocation 5.3
 
-QtObject {}
+QtObject {
+    property string version: "5.3"
+}

@@ -26,31 +26,31 @@ BlankScreen {
     ListModel {
         id: modules
 
-        ListElement { module: "QtQml";                   version: "2.2"; status: 0; testComponent: "Qml.qml" }
-        ListElement { module: "QtQuick";                 version: "2.4"; status: 0; testComponent: "Quick.qml" }
-        ListElement { module: "QtQuick.Controls";        version: "1.3"; status: 0; testComponent: "Controls.qml" }
-        ListElement { module: "QtQuick.Controls.Styles"; version: "1.3"; status: 0; testComponent: "Styles.qml" }
-        ListElement { module: "QtQuick.Layouts";         version: "1.1"; status: 0; testComponent: "Layouts.qml" }
-        ListElement { module: "QtQml.Models";            version: "2.1"; status: 0; testComponent: "Models.qml" }
-        ListElement { module: "QtQuick.XmlListModel";    version: "2.0"; status: 0; testComponent: "XmlListModel.qml" }
-        ListElement { module: "QtQuick.LocalStorage";    version: "2.0"; status: 0; testComponent: "LocalStorage.qml" }
-        ListElement { module: "QtQuick.Particles";       version: "2.0"; status: 0; testComponent: "Particles.qml" }
-        ListElement { module: "QtQuick.Window";          version: "2.2"; status: 0; testComponent: "Window.qml" }
-        ListElement { module: "QtQuick.Dialogs";         version: "1.2"; status: 0; testComponent: "Dialogs.qml" }
-        ListElement { module: "QtTest";                  version: "1.1"; status: 0; testComponent: "Test.qml" }
-        ListElement { module: "QtGraphicalEffects";      version: "1.0"; status: 0; testComponent: "GraphicalEffects.qml" }
-        ListElement { module: "QtSensors";               version: "5.5"; status: 0; testComponent: "Sensors.qml" }
-        ListElement { module: "QtMultimedia";            version: "5.4"; status: 0; testComponent: "Multimedia.qml" }
-        ListElement { module: "QtAudioEngine";           version: "1.0"; status: 0; testComponent: "AudioEngine.qml" }
-        ListElement { module: "QtPositioning";           version: "5.2"; status: 0; testComponent: "Positioning.qml" }
-        ListElement { module: "QtBluetooth";             version: "5.2"; status: 0; testComponent: "Bluetooth.qml" }
-        ListElement { module: "QtNfc";                   version: "5.2"; status: 0; testComponent: "Nfc.qml" }
-        ListElement { module: "QtWebSockets";            version: "1.0"; status: 0; testComponent: "WebSockets.qml" }
-        ListElement { module: "QtWebView";               version: "1.0"; status: 0; testComponent: "WebView.qml" }
-        ListElement { module: "QtCanvas3D";              version: "1.0"; status: 0; testComponent: "Canvas3D.qml" }
-        ListElement { module: "QtLocation";              version: "5.3"; status: 0; testComponent: "Location.qml" }
-        ListElement { module: "Qt.labs.folderlistmodel"; version: "2.1"; status: 0; testComponent: "FolderListModel.qml" }
-        ListElement { module: "Qt.labs.settings";        version: "1.0"; status: 0; testComponent: "Settings.qml" }
+        ListElement { module: "QtQml";                   version: ""; status: 0; testComponent: "Qml.qml" }
+        ListElement { module: "QtQuick";                 version: ""; status: 0; testComponent: "Quick.qml" }
+        ListElement { module: "QtQuick.Controls";        version: ""; status: 0; testComponent: "Controls.qml" }
+        ListElement { module: "QtQuick.Controls.Styles"; version: ""; status: 0; testComponent: "Styles.qml" }
+        ListElement { module: "QtQuick.Layouts";         version: ""; status: 0; testComponent: "Layouts.qml" }
+        ListElement { module: "QtQml.Models";            version: ""; status: 0; testComponent: "Models.qml" }
+        ListElement { module: "QtQuick.XmlListModel";    version: ""; status: 0; testComponent: "XmlListModel.qml" }
+        ListElement { module: "QtQuick.LocalStorage";    version: ""; status: 0; testComponent: "LocalStorage.qml" }
+        ListElement { module: "QtQuick.Particles";       version: ""; status: 0; testComponent: "Particles.qml" }
+        ListElement { module: "QtQuick.Window";          version: ""; status: 0; testComponent: "Window.qml" }
+        ListElement { module: "QtQuick.Dialogs";         version: ""; status: 0; testComponent: "Dialogs.qml" }
+        ListElement { module: "QtTest";                  version: ""; status: 0; testComponent: "Test.qml" }
+        ListElement { module: "QtGraphicalEffects";      version: ""; status: 0; testComponent: "GraphicalEffects.qml" }
+        ListElement { module: "QtSensors";               version: ""; status: 0; testComponent: "Sensors.qml" }
+        ListElement { module: "QtMultimedia";            version: ""; status: 0; testComponent: "Multimedia.qml" }
+        ListElement { module: "QtAudioEngine";           version: ""; status: 0; testComponent: "AudioEngine.qml" }
+        ListElement { module: "QtPositioning";           version: ""; status: 0; testComponent: "Positioning.qml" }
+        ListElement { module: "QtBluetooth";             version: ""; status: 0; testComponent: "Bluetooth.qml" }
+        ListElement { module: "QtNfc";                   version: ""; status: 0; testComponent: "Nfc.qml" }
+        ListElement { module: "Qt.WebSockets";           version: ""; status: 0; testComponent: "WebSockets.qml" }
+        ListElement { module: "QtWebView";               version: ""; status: 0; testComponent: "WebView.qml" }
+        ListElement { module: "QtCanvas3D";              version: ""; status: 0; testComponent: "Canvas3D.qml" }
+        ListElement { module: "QtLocation";              version: ""; status: 0; testComponent: "Location.qml" }
+        ListElement { module: "Qt.labs.folderlistmodel"; version: ""; status: 0; testComponent: "FolderListModel.qml" }
+        ListElement { module: "Qt.labs.settings";        version: ""; status: 0; testComponent: "Settings.qml" }
     }
 
     CToolBar {
@@ -96,8 +96,19 @@ BlankScreen {
         id: loader
         asynchronous: true
         onStatusChanged: {
-            if (status === Loader.Ready || status === Loader.Error) {
-                modules.get(moduleId).status = (status === Loader.Ready) ? 1 : 2
+            if (status === Loader.Ready || status === Loader.Error)
+            {
+                var module = modules.get(moduleId)
+
+                if (status === Loader.Ready)
+                {
+                    module.status = 1
+                    module.version = item.version
+                }
+                else
+                {
+                    module.status = 2
+                }
 
                 if (++moduleId < modules.count)
                     loader.source = "../modules/" + modules.get(moduleId).testComponent

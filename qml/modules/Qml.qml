@@ -18,4 +18,6 @@
 
 import QtQml 2.2
 
-QtObject {}
+QtObject {
+    property string version: "2.2"
+}
