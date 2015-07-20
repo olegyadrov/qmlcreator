@@ -1,7 +1,7 @@
 import QtQuick 2.4
 
 Item {
-  id: rootItem
-  anchors.fill: parent
+    id: rootItem
+    anchors.fill: parent
 
 }
