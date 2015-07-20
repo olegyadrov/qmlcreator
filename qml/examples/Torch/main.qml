@@ -1,5 +1,6 @@
 import QtQuick 2.4
 import QtMultimedia 5.4
+import QtQuick.Window 2.2
 
 Item {
     anchors.fill: parent
@@ -21,8 +22,8 @@ Item {
 
     Rectangle {
         anchors.centerIn: parent
-        width: 500
-        height: 500
+        width: Math.min(parent.width, parent.height) * 0.7
+        height: width
         radius: width / 2
         color: (torchEnabled) ? "#006224" : "#ffffff"
         border.color: "#80c342"

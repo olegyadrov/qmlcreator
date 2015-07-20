@@ -14,10 +14,8 @@
         <file>resources/images/icon128.png</file>
         <file>resources/images/icon256.png</file>
         <file>resources/images/icon512.png</file>
-        <file>resources/images/mask.png</file>
         <file>resources/images/particle1.png</file>
         <file>resources/images/particle2.png</file>
-        <file>resources/images/particle3.png</file>
         <file>resources/templates/JsFile.js</file>
         <file>resources/templates/MainFile.qml</file>
         <file>resources/templates/QmlFile.qml</file>
@@ -74,21 +72,23 @@
         <file>qml/screens/ProjectsScreen.qml</file>
         <file>qml/screens/SettingsScreen.qml</file>
         <file>qml/examples/Accelerometer/main.qml</file>
-        <file>qml/examples/Affector/main.qml</file>
         <file>qml/examples/Ambient Light Sensor/main.qml</file>
         <file>qml/examples/Analog Clock/Clock.qml</file>
         <file>qml/examples/Analog Clock/ClockBackground.qml</file>
         <file>qml/examples/Analog Clock/ClockDigits.qml</file>
         <file>qml/examples/Analog Clock/ClockHand.qml</file>
         <file>qml/examples/Analog Clock/main.qml</file>
-        <file>qml/examples/Brightness Contrast/main.qml</file>
         <file>qml/examples/Canvas/main.qml</file>
-        <file>qml/examples/Color Dialog/main.qml</file>
         <file>qml/examples/Controls/main.qml</file>
-        <file>qml/examples/Desaturate/main.qml</file>
         <file>qml/examples/Device Info/main.qml</file>
-        <file>qml/examples/Directional Blur/main.qml</file>
+        <file>qml/examples/Dialogs/ColorDialogTab.qml</file>
+        <file>qml/examples/Dialogs/main.qml</file>
+        <file>qml/examples/Dialogs/MessageDialogTab.qml</file>
         <file>qml/examples/Gradient Text/main.qml</file>
+        <file>qml/examples/Graphical Effects/BrightnessContrastTab.qml</file>
+        <file>qml/examples/Graphical Effects/DesaturateTab.qml</file>
+        <file>qml/examples/Graphical Effects/DirectionalBlurTab.qml</file>
+        <file>qml/examples/Graphical Effects/main.qml</file>
         <file>qml/examples/Joystick/Joystick.qml</file>
         <file>qml/examples/Joystick/main.qml</file>
         <file>qml/examples/Joystick/Player.qml</file>
@@ -96,18 +96,18 @@
         <file>qml/examples/Live Webcam/WebcamsModel.qml</file>
         <file>qml/examples/Local Storage/Database.js</file>
         <file>qml/examples/Local Storage/main.qml</file>
-        <file>qml/examples/Mask Shape/main.qml</file>
-        <file>qml/examples/Message Dialog/main.qml</file>
         <file>qml/examples/Multi-touch/main.qml</file>
         <file>qml/examples/Multi-touch/TouchItem.qml</file>
         <file>qml/examples/Camera/main.qml</file>
+        <file>qml/examples/Particles/main.qml</file>
         <file>qml/examples/Proximity Sensor/main.qml</file>
         <file>qml/examples/Repeater/ColorRect.qml</file>
         <file>qml/examples/Repeater/main.qml</file>
         <file>qml/examples/Settings/main.qml</file>
         <file>qml/examples/Shader Effect/main.qml</file>
         <file>qml/examples/Styles/main.qml</file>
-        <file>qml/examples/Styles/SBusyIndicator.qml</file>
+        <file>qml/examples/Styles/SBusyIndicatorStyle.qml</file>
+        <file>qml/examples/Styles/SButtonStyle.qml</file>
         <file>qml/examples/Swipe View/LogInScreen.qml</file>
         <file>qml/examples/Swipe View/main.qml</file>
         <file>qml/examples/Swipe View/RegisterScreen.qml</file>
@@ -117,7 +117,6 @@
         <file>qml/examples/Timer/main.qml</file>
         <file>qml/examples/Torch/main.qml</file>
         <file>qml/examples/Transform/main.qml</file>
-        <file>qml/examples/Transform/Stars.qml</file>
         <file>qml/examples/WebSocket/main.qml</file>
         <file>qml/examples/XMLHttpRequest/main.qml</file>
         <file>resources/dictionaries/javascript.txt</file>

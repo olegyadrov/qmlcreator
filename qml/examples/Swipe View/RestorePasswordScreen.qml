@@ -3,22 +3,22 @@ import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.1
 
 SwipeScreen {
-  onSelected: emailTextField.forceActiveFocus()
+    onSelected: emailTextField.forceActiveFocus()
 
-  ColumnLayout {
-    anchors.centerIn: parent
+    ColumnLayout {
+        anchors.centerIn: parent
 
-    RowLayout {
-      Label { text: "Email" }
-      TextField {
-        id: emailTextField
-        Layout.fillWidth: true
-      }
+        RowLayout {
+            Label { text: "Email" }
+            TextField {
+                id: emailTextField
+                Layout.fillWidth: true
+            }
+        }
+
+        Button {
+            Layout.fillWidth: true
+            text: "Send instructions"
+        }
     }
-
-    Button {
-      Layout.fillWidth: true
-      text: "Send instructions"
-    }
-  }
 }

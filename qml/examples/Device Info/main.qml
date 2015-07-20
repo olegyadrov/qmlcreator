@@ -70,6 +70,16 @@ Item {
         return displayNames
     }
 
+    function availableSensors() {
+        var sensors = QmlSensors.sensorTypes()
+        var displayNames = []
+
+        for (var attr in sensors)
+            displayNames.push(sensors[attr])
+
+        return displayNames
+    }
+
     function refreshInfo() {
         var systemInfo = {
             "Operating System" : Qt.platform.os,
@@ -89,7 +99,7 @@ Item {
                 "Profile" : openGLProfile(),
                 "Renderable type" : openGLRenderableType()
             },
-            "Available Sensors" : QmlSensors.sensorTypes(),
+            "Available Sensors" : availableSensors(),
             "Available Cameras" : availableCameras()
         }
 

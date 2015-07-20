@@ -6,6 +6,10 @@ Item {
     id: accelerometerExample
     anchors.fill: parent
 
+    property double pixelDensity
+    Component.onCompleted:
+        pixelDensity = Screen.logicalPixelDensity
+
     Rectangle {
         id: ball
         x: accelerometerExample.width / 2 - width / 2
@@ -23,15 +27,9 @@ Item {
         id: accelerometer
         active: true
         dataRate: 20
-    }
-
-    Timer {
-        interval: 100
-        running: true
-        repeat: true
-        onTriggered: {
-            var newX = ball.x - accelerometer.reading.x * Screen.logicalPixelDensity * 3
-            var newY = ball.y + accelerometer.reading.y * Screen.logicalPixelDensity * 3
+        onReadingChanged: {
+            var newX = ball.x - reading.x * pixelDensity * 3
+            var newY = ball.y + reading.y * pixelDensity * 3
 
             if (newX + ball.width > accelerometerExample.width)
                 newX = accelerometerExample.width - ball.width
