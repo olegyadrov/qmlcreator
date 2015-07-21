@@ -75,7 +75,7 @@ BlankScreen {
                         title: "Font size",
                         text: "Preview",
                         minSize: 10,
-                        maxSize: 100,
+                        maxSize: 120,
                         currentSize: settings.fontSize
                     }
 
