@@ -23,6 +23,7 @@ import "../components"
 BlankScreen {
     id: modulesScreen
 
+    // http://doc.qt.io/qt-5/modules-qml.html
     ListModel {
         id: modules
 
