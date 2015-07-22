@@ -280,6 +280,9 @@ Item {
                     textEdit.cursorPosition = startPosition
                     textEdit.forceActiveFocus()
 
+                    if (!Qt.inputMethod.visible)
+                        Qt.inputMethod.show()
+
                     mouse.accepted = true
                 }
 

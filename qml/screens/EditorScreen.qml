@@ -40,19 +40,6 @@ BlankScreen {
             }
 
             CToolButton {
-                visible: !settings.desktopPlatform
-                Layout.fillHeight: true
-                icon: "\uf11c"
-                tooltipText: Qt.inputMethod.visible ? qsTr("Hide keyboard") : qsTr("Show keyboard")
-                onClicked: {
-                    if (Qt.inputMethod.visible)
-                        Qt.inputMethod.hide()
-                    else
-                        Qt.inputMethod.show()
-                }
-            }
-
-            CToolButton {
                 visible: codeArea.selectedText.length > 0
                 Layout.fillHeight: true
                 icon: "\uf034"
@@ -93,10 +80,6 @@ BlankScreen {
 
     CCodeArea {
         id: codeArea
-
-        Component.onCompleted: {
-            forceActiveFocus()
-        }
 
         Component.onDestruction: {
             projectManager.saveFileContent(text)
