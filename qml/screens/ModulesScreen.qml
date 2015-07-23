@@ -83,7 +83,12 @@ BlankScreen {
                              qsTr("Not available")
                          else
                              qsTr("Undefined")
-            descriptionColor: (status === 1) ? palette.description : palette.warning
+            descriptionColor: if (status === 1)
+                                  palette.description
+                              else if (status === 2)
+                                  palette.warning
+                              else
+                                  palette.label
         }
     }
 
