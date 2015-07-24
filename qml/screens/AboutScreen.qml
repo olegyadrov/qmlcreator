@@ -44,7 +44,7 @@ BlankScreen {
         text:  textStyle() +
                Qt.application.name + " " + Qt.application.version + "<br>
                Based on Qt Quick 2.4 (Qt 5.4.2)<br>
-               Built on Jun 07 2015<br><br>
+               Built on Jul 23 2015<br><br>
                Copyright (C) 2013-2015 <a href=\"https://linkedin.com/in/olegyadrov/\">Oleg Yadrov</a><br>
                <a class=\"link\" href=\"mailto:wearyinside@gmail.com\">wearyinside@gmail.com</a><br><br>
 
