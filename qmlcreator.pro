@@ -1,4 +1,4 @@
-QT += core gui widgets qml quick sensors sql multimedia network websockets xml svg bluetooth nfc positioning
+QT += core gui qml quick sensors sql multimedia network websockets xml svg bluetooth nfc positioning
 QMAKE_CXXFLAGS += -std=c++11
 
 TARGET = qmlcreator

@@ -16,7 +16,7 @@
 **
 ****************************************************************************/
 
-#include <QtWidgets/QApplication>
+#include <QtGui/QGuiApplication>
 #include <QtQml/QQmlApplicationEngine>
 #include <QtQuick/QQuickTextDocument>
 #include "ProjectManager.h"
@@ -24,7 +24,7 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
+    QGuiApplication app(argc, argv);
     app.setApplicationName("QML Creator");
     app.setApplicationVersion("1.2.3");
     app.setOrganizationName("wearyinside");
