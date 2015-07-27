@@ -57,7 +57,7 @@ BlankScreen {
                <a href=\"https://itunes.apple.com/us/app/qml-creator/id944301984\">App Store</a>,
                the source code is available at <a href=\"https://github.com/wearyinside/qmlcreator\">https://github.com/wearyinside/qmlcreator</a><br><br>
 
-               You are welcome to support me by donating some bitcoins at
+               You are welcome to support me by donating some bitcoins to
                <a href=\"https://blockchain.info/address/1weary24fY4PqH542yGEgwZcYksGv7zLB\">1weary24fY4PqH542yGEgwZcYksGv7zLB</a><br><br>
 
                Unless required by applicable law or agreed to in writing, software distributed under the License
