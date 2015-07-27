@@ -126,7 +126,7 @@ ApplicationWindow {
 
     // Focus Management
 
-    property var focusItem: null
+    property Item focusItem: null
     signal backPressed()
 
     onActiveFocusItemChanged: {
