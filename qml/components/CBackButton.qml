@@ -38,7 +38,7 @@ Item {
         spacing: 3 * settings.pixelDensity
 
         CIcon {
-            text: ""
+            text: "\uf104"
         }
 
         CLabel {
