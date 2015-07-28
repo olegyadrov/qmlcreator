@@ -1,4 +1,4 @@
-import QtQuick 2.4
+import QtQuick 2.5
 import QtMultimedia 5.4
 import QtQuick.Window 2.2
 

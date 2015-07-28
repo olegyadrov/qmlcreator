@@ -1,4 +1,4 @@
-import QtQuick 2.4
+import QtQuick 2.5
 import QtSensors 5.1
 
 Item {

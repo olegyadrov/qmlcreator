@@ -16,8 +16,8 @@
 **
 ****************************************************************************/
 
-import QtQuick 2.4
-import QtQuick.Layouts 1.1
+import QtQuick 2.5
+import QtQuick.Layouts 1.2
 
 Item {
     id: cDialogButton

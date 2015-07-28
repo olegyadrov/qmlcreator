@@ -17,7 +17,7 @@
 ****************************************************************************/
 
 import QtQml 2.2
-import QtQuick.Layouts 1.1
+import QtQuick.Layouts 1.2
 
 QtObject {
     property string version: "1.1"
