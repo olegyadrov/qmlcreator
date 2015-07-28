@@ -123,6 +123,9 @@
         <file>resources/dictionaries/keywords.txt</file>
         <file>resources/dictionaries/properties.txt</file>
         <file>resources/dictionaries/qml.txt</file>
+        <file>qml/modules/3D.qml</file>
+        <file>qml/modules/3DInput.qml</file>
+        <file>qml/modules/3DRenderer.qml</file>
         <file>qml/modules/AudioEngine.qml</file>
         <file>qml/modules/Bluetooth.qml</file>
         <file>qml/modules/Canvas3D.qml</file>
@@ -140,6 +143,7 @@
         <file>qml/modules/Positioning.qml</file>
         <file>qml/modules/Qml.qml</file>
         <file>qml/modules/Quick.qml</file>
+        <file>qml/modules/Scene3D.qml</file>
         <file>qml/modules/Sensors.qml</file>
         <file>qml/modules/Settings.qml</file>
         <file>qml/modules/Styles.qml</file>

@@ -20,5 +20,5 @@ import QtQml 2.2
 import QtQuick.Controls 1.4
 
 QtObject {
-    property string version: "1.3"
+    property string version: "1.4"
 }

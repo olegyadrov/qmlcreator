@@ -17,8 +17,8 @@
 ****************************************************************************/
 
 import QtQml 2.2
-import QtQuick.Controls.Styles 1.4
+import QtQuick.Scene3D 2.0
 
 QtObject {
-    property string version: "1.4"
+    property string version: "2.0"
 }

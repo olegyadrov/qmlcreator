@@ -46,8 +46,14 @@ BlankScreen {
         ListElement { module: "QtPositioning";           version: ""; status: 0; testComponent: "Positioning.qml" }
         ListElement { module: "QtBluetooth";             version: ""; status: 0; testComponent: "Bluetooth.qml" }
         ListElement { module: "QtNfc";                   version: ""; status: 0; testComponent: "Nfc.qml" }
-        ListElement { module: "Qt.WebSockets";           version: ""; status: 0; testComponent: "WebSockets.qml" }
+        ListElement { module: "QtWebSockets";            version: ""; status: 0; testComponent: "WebSockets.qml" }
         ListElement { module: "QtWebView";               version: ""; status: 0; testComponent: "WebView.qml" }
+
+        ListElement { module: "Qt3D";                    version: ""; status: 0; testComponent: "3D.qml" }
+        ListElement { module: "Qt3D.Input";              version: ""; status: 0; testComponent: "3DInput.qml" }
+        ListElement { module: "Qt3D.Renderer";           version: ""; status: 0; testComponent: "3DRenderer.qml" }
+        ListElement { module: "QtQuick.Scene3D";         version: ""; status: 0; testComponent: "Scene3D.qml" }
+
         ListElement { module: "QtCanvas3D";              version: ""; status: 0; testComponent: "Canvas3D.qml" }
         ListElement { module: "QtLocation";              version: ""; status: 0; testComponent: "Location.qml" }
         ListElement { module: "Qt.labs.folderlistmodel"; version: ""; status: 0; testComponent: "FolderListModel.qml" }
