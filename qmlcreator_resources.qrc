@@ -16,6 +16,7 @@
         <file>resources/images/icon512.png</file>
         <file>resources/images/particle1.png</file>
         <file>resources/images/particle2.png</file>
+        <file>resources/meshes/logo.obj</file>
         <file>resources/templates/JsFile.js</file>
         <file>resources/templates/MainFile.qml</file>
         <file>resources/templates/QmlFile.qml</file>
@@ -71,6 +72,7 @@
         <file>qml/screens/PlaygroundScreen.qml</file>
         <file>qml/screens/ProjectsScreen.qml</file>
         <file>qml/screens/SettingsScreen.qml</file>
+        <file>qml/examples/3D/main.qml</file>
         <file>qml/examples/Accelerometer/main.qml</file>
         <file>qml/examples/Ambient Light Sensor/main.qml</file>
         <file>qml/examples/Analog Clock/Clock.qml</file>
