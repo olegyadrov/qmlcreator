@@ -133,6 +133,7 @@
         <file>qml/modules/Canvas3D.qml</file>
         <file>qml/modules/Controls.qml</file>
         <file>qml/modules/Dialogs.qml</file>
+        <file>qml/modules/Extras.qml</file>
         <file>qml/modules/FolderListModel.qml</file>
         <file>qml/modules/GraphicalEffects.qml</file>
         <file>qml/modules/Layouts.qml</file>

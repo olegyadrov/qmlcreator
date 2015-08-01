@@ -38,6 +38,7 @@ BlankScreen {
         ListElement { module: "QtQuick.Particles";       version: ""; status: 0; testComponent: "Particles.qml" }
         ListElement { module: "QtQuick.Window";          version: ""; status: 0; testComponent: "Window.qml" }
         ListElement { module: "QtQuick.Dialogs";         version: ""; status: 0; testComponent: "Dialogs.qml" }
+        ListElement { module: "QtQuick.Extras";          version: ""; status: 0; testComponent: "Extras.qml" }
         ListElement { module: "QtTest";                  version: ""; status: 0; testComponent: "Test.qml" }
         ListElement { module: "QtGraphicalEffects";      version: ""; status: 0; testComponent: "GraphicalEffects.qml" }
         ListElement { module: "QtSensors";               version: ""; status: 0; testComponent: "Sensors.qml" }
