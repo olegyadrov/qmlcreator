@@ -18,12 +18,6 @@
 
 #include "QMLHighlighter.h"
 
-class QMLBlockData: public QTextBlockUserData
-{
-public:
-    QList<int> bracketPositions;
-};
-
 bool QMLHighlighter::m_cacheLoaded = false;
 QSet<QString> QMLHighlighter::m_keywordsCache = QSet<QString>();
 QSet<QString> QMLHighlighter::m_jsIdsCache = QSet<QString>();
@@ -50,11 +44,11 @@ void QMLHighlighter::setColor(ColorComponent component, const QColor &color)
 void QMLHighlighter::highlightBlock(const QString &text)
 {
     enum {
-        Start = 0,
-        Number = 1,
-        Identifier = 2,
-        String = 3,
-        Comment = 4
+        StartState = 0,
+        NumberState = 1,
+        IdentifierState = 2,
+        StringState = 3,
+        CommentState = 4
     };
 
     QList<int> bracketPositions;
@@ -64,7 +58,7 @@ void QMLHighlighter::highlightBlock(const QString &text)
     int state = blockState & 15;
     if (blockState < 0) {
         bracketLevel = 0;
-        state = Start;
+        state = StartState;
     }
 
     int start = 0;
@@ -75,26 +69,26 @@ void QMLHighlighter::highlightBlock(const QString &text)
 
         switch (state) {
 
-        case Start:
+        case StartState:
             start = i;
             if (ch.isSpace()) {
                 ++i;
             } else if (ch.isDigit()) {
                 ++i;
-                state = Number;
+                state = NumberState;
             } else if (ch.isLetter() || ch == '_') {
                 ++i;
-                state = Identifier;
+                state = IdentifierState;
             } else if (ch == '\'' || ch == '\"') {
                 ++i;
-                state = String;
+                state = StringState;
             } else if (ch == '/' && next == '*') {
                 ++i;
                 ++i;
-                state = Comment;
+                state = CommentState;
             } else if (ch == '/' && next == '/') {
                 i = text.length();
-                setFormat(start, text.length(), m_colors[ColorComponent::Comment]);
+                setFormat(start, text.length(), m_colors[Comment]);
             } else {
                 if (!QString("(){}[]").contains(ch))
                     setFormat(start, 1, m_colors[Operator]);
@@ -106,20 +100,20 @@ void QMLHighlighter::highlightBlock(const QString &text)
                         bracketLevel--;
                 }
                 ++i;
-                state = Start;
+                state = StartState;
             }
             break;
 
-        case Number:
+        case NumberState:
             if (ch.isSpace() || !ch.isDigit()) {
-                setFormat(start, i - start, m_colors[ColorComponent::Number]);
-                state = Start;
+                setFormat(start, i - start, m_colors[Number]);
+                state = StartState;
             } else {
                 ++i;
             }
             break;
 
-        case Identifier:
+        case IdentifierState:
             if (ch.isSpace() || !(ch.isDigit() || ch.isLetter() || ch == '_')) {
                 QString token = text.mid(start, i - start).trimmed();
                 if (m_keywordsCache.contains(token))
@@ -130,19 +124,19 @@ void QMLHighlighter::highlightBlock(const QString &text)
                     setFormat(start, i - start, m_colors[Property]);
                 else if (m_jsIdsCache.contains(token) || m_jsIds.contains(token))
                     setFormat(start, i - start, m_colors[BuiltIn]);
-                state = Start;
+                state = StartState;
             } else {
                 ++i;
             }
             break;
 
-        case String:
+        case StringState:
             if (ch == text.at(start)) {
                 QChar prev = (i > 0) ? text.at(i - 1) : QChar();
                 if (prev != '\\') {
                     ++i;
-                    setFormat(start, i - start, m_colors[ColorComponent::String]);
-                    state = Start;
+                    setFormat(start, i - start, m_colors[String]);
+                    state = StartState;
                 } else {
                     ++i;
                 }
@@ -151,34 +145,34 @@ void QMLHighlighter::highlightBlock(const QString &text)
             }
             break;
 
-        case Comment:
+        case CommentState:
             if (ch == '*' && next == '/') {
                 ++i;
                 ++i;
-                setFormat(start, i - start, m_colors[ColorComponent::Comment]);
-                state = Start;
+                setFormat(start, i - start, m_colors[Comment]);
+                state = StartState;
             } else {
                 ++i;
             }
             break;
 
         default:
-            state = Start;
+            state = StartState;
             break;
         }
     }
 
-    if (state == Comment)
-        setFormat(start, text.length(), m_colors[ColorComponent::Comment]);
+    if (state == CommentState)
+        setFormat(start, text.length(), m_colors[Comment]);
     else
-        state = Start;
+        state = StartState;
 
     if (!m_markString.isEmpty()) {
         int pos = 0;
         int len = m_markString.length();
         QTextCharFormat markerFormat;
-        markerFormat.setBackground(m_colors[ColorComponent::Marker]);
-        markerFormat.setForeground(m_colors[ColorComponent::Normal]);
+        markerFormat.setBackground(m_colors[Marker]);
+        markerFormat.setForeground(m_colors[Normal]);
         for (;;) {
             pos = text.indexOf(m_markString, pos, m_markCaseSensitivity);
             if (pos < 0)
@@ -186,15 +180,6 @@ void QMLHighlighter::highlightBlock(const QString &text)
             setFormat(pos, len, markerFormat);
             ++pos;
         }
-    }
-
-    if (!bracketPositions.isEmpty()) {
-        QMLBlockData *blockData = reinterpret_cast<QMLBlockData*>(currentBlock().userData());
-        if (!blockData) {
-            blockData = new QMLBlockData;
-            currentBlock().setUserData(blockData);
-        }
-        blockData->bracketPositions = bracketPositions;
     }
 
     blockState = (state & 15) | (bracketLevel << 4);

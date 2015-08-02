@@ -25,10 +25,10 @@
 
 class QMLHighlighter : public QSyntaxHighlighter
 {
+    Q_OBJECT
 
 public:
-    typedef enum {
-        Background,
+    enum ColorComponent {
         Normal,
         Comment,
         Number,
@@ -36,16 +36,10 @@ public:
         Operator,
         Keyword,
         BuiltIn,
-        Sidebar,
-        LineNumber,
-        Cursor,
         Marker,
-        BracketMatch,
-        BracketError,
-        FoldIndicator,
         Item,
         Property
-    } ColorComponent;
+    };
 
     QMLHighlighter(QTextDocument *parent = 0);
     void setColor(ColorComponent component, const QColor &color);

@@ -1,5 +1,4 @@
 QT += core gui qml quick sensors sql multimedia network websockets xml svg bluetooth nfc positioning 3dcore 3drenderer 3dinput 3dquick
-QMAKE_CXXFLAGS += -std=c++11
 
 TARGET = qmlcreator
 TEMPLATE = app
