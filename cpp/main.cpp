@@ -19,6 +19,7 @@
 #include <QtGui/QGuiApplication>
 #include <QtQml/QQmlApplicationEngine>
 #include <QtQuick/QQuickTextDocument>
+#include <QtCore/QTranslator>
 #include "ProjectManager.h"
 #include "SyntaxHighlighter.h"
 
@@ -29,6 +30,10 @@ int main(int argc, char *argv[])
     app.setApplicationVersion("1.2.3");
     app.setOrganizationName("wearyinside");
     app.setOrganizationDomain("com.wearyinside.qmlcreator");
+
+    QTranslator translator;
+    translator.load("qmlcreator_" + QLocale::system().name(), ":/resources/translations");
+    app.installTranslator(&translator);
 
     qmlRegisterType<ProjectManager>("ProjectManager", 1, 1, "ProjectManager");
     qmlRegisterType<SyntaxHighlighter>("SyntaxHighlighter", 1, 1, "SyntaxHighlighter");

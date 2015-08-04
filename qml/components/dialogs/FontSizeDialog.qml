@@ -139,7 +139,7 @@ BaseDialog {
             anchors.left: parent.left
             anchors.right: footer.left
             anchors.bottom: parent.bottom
-            text: "Cancel"
+            text: qsTr("Cancel")
             onClicked: fontSizeDialog.close()
         }
 
@@ -153,7 +153,7 @@ BaseDialog {
             anchors.left: footer.right
             anchors.right: parent.right
             anchors.bottom: parent.bottom
-            text: "OK"
+            text: qsTr("OK")
             onClicked: fontSizeDialog.process(previewLabel.font.pixelSize)
         }
     }

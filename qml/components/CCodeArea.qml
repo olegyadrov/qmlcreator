@@ -453,9 +453,9 @@ Item {
                 boundsBehavior: Flickable.StopAtBounds
 
                 model: ListModel {
-                    ListElement { text: "Undo" }
-                    ListElement { text: "Redo" }
-                    ListElement { text: "Paste" }
+                    ListElement { text: qsTr("Undo") }
+                    ListElement { text: qsTr("Redo") }
+                    ListElement { text: qsTr("Paste") }
                 }
 
                 function contextMenuCallback(index) {

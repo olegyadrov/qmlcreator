@@ -107,7 +107,7 @@ BaseDialog {
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: parent.bottom
-            text: "OK"
+            text: qsTr("OK")
             onClicked: messageDialog.closed(true)
         }
     }

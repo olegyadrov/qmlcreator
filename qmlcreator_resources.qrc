@@ -155,5 +155,6 @@
         <file>qml/modules/WebView.qml</file>
         <file>qml/modules/Window.qml</file>
         <file>qml/modules/XmlListModel.qml</file>
+        <file>resources/translations/qmlcreator_ru.qm</file>
     </qresource>
 </RCC>

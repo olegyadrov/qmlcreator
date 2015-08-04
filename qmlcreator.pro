@@ -20,6 +20,13 @@ SOURCES += \
     cpp/QMLHighlighter.cpp \
     cpp/SyntaxHighlighter.cpp
 
+lupdate_only {
+SOURCES += \
+    qml/components/*.qml \
+    qml/components/dialogs/*.qml \
+    qml/screens/*.qml
+}
+
 android {
     OTHER_FILES += platform-specific/android/AndroidManifest.xml
     ANDROID_PACKAGE_SOURCE_DIR = $$PWD/platform-specific/android

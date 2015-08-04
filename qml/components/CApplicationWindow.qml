@@ -63,8 +63,8 @@ ApplicationWindow {
                     title: qsTr("New examples"),
                     text: qsTr("We detected that you had recently updated QML Creator on your device.") + "\n" +
                           qsTr("We are constantly working on QML Creator improvement, and we may have added some new sample projects in the current release.") + "\n" +
-                          qsTr("Press OK if you would like to get them now (notice that all the changes you have made in the \"Examples\" section will be removed)") + "\n" +
-                          qsTr("Alternatively, you can do it later by pressing the \"Restore examples\" button in the \"Examples\" screen.")
+                          qsTr("Press OK if you would like to get them now (notice that all the changes you have made in the Examples section will be removed)") + "\n" +
+                          qsTr("Alternatively, you can do it later by pressing the Restore examples button in the Examples screen.")
                 }
 
                 var callback = function(value)

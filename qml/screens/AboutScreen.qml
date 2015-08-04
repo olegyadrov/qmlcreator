@@ -51,7 +51,7 @@ BlankScreen {
                QML Creator application is distributed under
                <a href=\"http://www.apache.org/licenses/LICENSE-2.0\">Apache Software License, Version 2</a>.<br><br>
 
-               It's available through
+               It's available on
                <a href=\"https://play.google.com/store/apps/details?id=com.wearyinside.qmlcreator\">Google Play</a>
                and
                <a href=\"https://itunes.apple.com/us/app/qml-creator/id944301984\">App Store</a>,

@@ -53,7 +53,7 @@ BlankScreen {
                 description: settings.font
                 onClicked: {
                     var parameters = {
-                        title: "Editor font",
+                        title: qsTr("Editor font"),
                         model: editorFonts,
                         currentIndex: editorFonts.getCurrentIndex()
                     }
@@ -72,7 +72,7 @@ BlankScreen {
 
                 onClicked: {
                     var parameters = {
-                        title: "Font size",
+                        title: qsTr("Font size"),
                         text: "Preview",
                         minSize: 10,
                         maxSize: 120,
@@ -100,7 +100,7 @@ BlankScreen {
 
                 onClicked: {
                     var parameters = {
-                        title: "Indent size",
+                        title: qsTr("Indent size"),
                         minSize: 0,
                         maxSize: 4,
                         currentSize: settings.indentSize
@@ -124,7 +124,7 @@ BlankScreen {
                 description: settings.palette
                 onClicked: {
                     var parameters = {
-                        title: "Palette",
+                        title: qsTr("Palette"),
                         model: palettes,
                         currentIndex: palettes.getCurrentIndex()
                     }
