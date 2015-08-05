@@ -11,7 +11,7 @@ Rectangle {
     color: "#ffffff"
 
     Scene3D {
-        width: Math.min(parent.width, parent.height)
+        width: Math.min(parent.width, parent.height) * 0.7
         height: width
         anchors.centerIn: parent
         aspects: "input"
@@ -23,7 +23,7 @@ Rectangle {
                 id: camera
                 projectionType: CameraLens.PerspectiveProjection
                 fieldOfView: 40
-                aspectRatio: 4/3
+                aspectRatio: 1
                 nearPlane : 0.1
                 farPlane : 1000.0
                 position: Qt.vector3d(0.0, 0.0, 7.5)
@@ -95,6 +95,15 @@ Rectangle {
             minimumValue: 0
             maximumValue: 360
             value: 0
+            enabled: !animateCheckBox.checked
+
+            NumberAnimation on value {
+                from: 0
+                to: 360
+                duration: 4000
+                loops: NumberAnimation.Infinite
+                running: animateCheckBox.checked
+            }
         }
 
         Label { text: "Z" }
@@ -104,6 +113,12 @@ Rectangle {
             minimumValue: 0
             maximumValue: 360
             value: 0
+        }
+
+        CheckBox {
+            id: animateCheckBox
+            text: "Animate"
+            checked: true
         }
     }
 }
