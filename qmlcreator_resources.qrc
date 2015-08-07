@@ -98,6 +98,11 @@
         <file>qml/examples/Live Webcam/WebcamsModel.qml</file>
         <file>qml/examples/Local Storage/Database.js</file>
         <file>qml/examples/Local Storage/main.qml</file>
+        <file>qml/examples/Looped List View/DateSelector.qml</file>
+        <file>qml/examples/Looped List View/LoopedListView.qml</file>
+        <file>qml/examples/Looped List View/LoopedListViewDelegate.qml</file>
+        <file>qml/examples/Looped List View/main.qml</file>
+        <file>qml/examples/Looped List View/NumberSelector.qml</file>
         <file>qml/examples/Multi-touch/main.qml</file>
         <file>qml/examples/Multi-touch/TouchItem.qml</file>
         <file>qml/examples/Camera/main.qml</file>
