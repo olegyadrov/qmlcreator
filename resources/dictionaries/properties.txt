@@ -10,6 +10,8 @@ activeFocus
 activeFocusItem
 activeFocusOnPress
 activeFocusOnTab
+activeFrameGraph
+activeInput
 actualLocation
 add
 addDisplaced
@@ -43,9 +45,12 @@ animations
 antennaConnected
 antialiasing
 aperture
+api
 application
 area
 ascent
+aspectRatio
+aspects
 asynchronous
 atXBeginning
 atXEnd
@@ -86,6 +91,7 @@ baseUrl
 baseline
 baselineOffset
 bezierCurve
+bindingType
 blending
 blue
 blueVariation
@@ -133,6 +139,7 @@ chapterNumber
 checkStateMixed
 checkable
 checked
+childNodes
 children
 childrenInherit
 childrenRect
@@ -152,6 +159,7 @@ columnSpan
 columns
 comment
 completed
+components
 composer
 conductor
 connected
@@ -177,6 +185,8 @@ control2X
 control2Y
 controlX
 controlY
+controlledCamera
+controller
 coordinate
 copyright
 corner
@@ -188,6 +198,7 @@ county
 coverArtUrlLarge
 coverArtUrlSmall
 criteria
+cubeMapFace
 cullMode
 current
 currentColor
@@ -207,6 +218,7 @@ cursorRectangle
 cursorShape
 cursorVisible
 customFocusPoint
+cutOffAngle
 damping
 dark
 data
@@ -260,6 +272,8 @@ dragging
 draggingHorizontally
 draggingVertically
 dropDownButtonWidth
+dstAlpha
+dstRGB
 duration
 durationVariation
 easing
@@ -284,6 +298,7 @@ end
 endRotation
 endSize
 engine
+entity
 entryEffect
 epsilon
 error
@@ -297,9 +312,11 @@ exponential
 exposureCompensation
 exposureMode
 extend
+extensions
 factor
 fade
 family
+farPlane
 fast
 fieldOfView
 fileUrl
@@ -486,6 +503,7 @@ labelPositioning
 language
 latitudeValid
 layer
+layers
 layoutDirection
 leadPerformer
 leading
@@ -599,6 +617,7 @@ minimumX
 minimumY
 minorVersion
 mipmap
+mipmapLevel
 mirror
 miterLimit
 modality
@@ -621,6 +640,7 @@ movingVertically
 multiLine
 muted
 name
+names
 nameFilters
 namespaceDeclarations
 nativeCountryName
@@ -629,12 +649,14 @@ nativeScanCode
 navigationBar
 navigationBarVisible
 near
+nearPlane
 negativeSign
 newParent
 nextSection
 noiseSource
 nonScalableFonts
 notation
+object
 objectName
 offset
 onPath
@@ -660,6 +682,7 @@ pace
 paintedHeight
 paintedWidth
 panel
+parameterName
 parent
 parentFolder
 parentalRating
@@ -726,6 +749,8 @@ previousY
 primaryOrientation
 priority
 profile
+projectionMatrix
+projectionType
 programType
 programTypeName
 progress
@@ -839,12 +864,14 @@ serviceDescription
 serviceName
 serviceProtocol
 serviceUuid
+shaderVariableName
 shadow
 shadowBlur
 shadowColor
 shadowOffsetX
 shadowOffsetY
 shape
+shareable
 sharpeningLevel
 shortcut
 showAlphaChannel
@@ -887,6 +914,8 @@ spread
 spring
 sprites
 spritesInterpolate
+srcAlpha
+srcRGB
 standardButtons
 start
 startCenter
@@ -966,6 +995,7 @@ touchPoints
 trackCount
 trackNumber
 transform
+transforms
 transformOrigin
 transientScrollBars
 transitions
@@ -983,6 +1013,7 @@ updateInterval
 updateValueWhileDragging
 uri
 urls
+upVector
 useLargeArc
 userOrientation
 userRating
@@ -993,6 +1024,7 @@ validator
 value
 velocity
 velocityFromMovement
+vendor
 vertexShader
 verticalAccuracy
 verticalAccuracyValid
@@ -1013,6 +1045,7 @@ videoCodec
 videoEncodingMode
 videoFrameRate
 view
+viewCenter
 viewfinder
 viewport
 visible

@@ -1,3 +1,4 @@
+AbstractTextureImage
 Accelerometer
 AccelerometerReading
 Accessible
@@ -18,6 +19,7 @@ AnimatedSprite
 Animation
 AnimationController
 Animator
+Annotation
 ApplicationWindow
 ApplicationWindowStyle
 AttenuationModelInverse
@@ -31,6 +33,8 @@ AudioSample
 Behavior
 Binding
 Blend
+BlendState
+BlendStateSeparate
 BluetoothDiscoveryModel
 BluetoothService
 BluetoothSocket
@@ -48,6 +52,7 @@ CameraExposure
 CameraFlash
 CameraFocus
 CameraImageProcessing
+CameraLens
 CameraRecorder
 Canvas
 CanvasGradient
@@ -69,6 +74,8 @@ ComboBoxStyle
 Compass
 CompassReading
 Component
+Component3D
+Configuration
 ConicalGradient
 Connections
 ContactDetail
@@ -95,6 +102,8 @@ DropShadow
 EditorialModel
 EllipseShape
 Emitter
+Entity
+EntityLoader
 ExclusiveGroup
 ExtendedAttributes
 FastBlur
@@ -107,6 +116,8 @@ FolderListModel
 FontDialog
 FontLoader
 FontMetrics
+FrameGraph
+FrameGraphNode
 Friction
 GammaAdjust
 GaussianBlur
@@ -141,7 +152,11 @@ ItemParticle
 KeyEvent
 KeyNavigation
 Keys
+KeyboardController
+KeyboardInput
 Label
+Layer
+LayerFilter
 Layout
 LayoutMirroring
 LevelAdjust
@@ -171,6 +186,7 @@ MapType
 MaskShape
 MaskedBlur
 Matrix4x4
+MatrixTransform
 MediaPlayer
 Menu
 MenuBar
@@ -188,16 +204,20 @@ NdefRecord
 NdefTextRecord
 NdefUriRecord
 NearField
+Node
+NodeInstantiator
 Number
 NumberAnimation
 ObjectModel
 OpacityAnimator
 OpacityMask
+OpenGLFilter
 OpenGLInfo
 OrientationReading
 OrientationSensor
 Package
 ParallelAnimation
+ParameterMapping
 ParentAnimation
 ParentChange
 Particle
@@ -228,6 +248,7 @@ PlayVariation
 Plugin
 PluginParameter
 PointDirection
+PointLight
 Position
 PositionSource
 Positioner
@@ -270,6 +291,7 @@ Row
 RowLayout
 Scale
 ScaleAnimator
+Scene3D
 Screen
 ScriptAction
 ScrollView
@@ -293,6 +315,7 @@ SoundInstance
 SpinBox
 SpinBoxStyle
 SplitView
+SpotLight
 SpringAnimation
 Sprite
 SpriteGoal
@@ -328,6 +351,7 @@ TextField
 TextFieldStyle
 TextInput
 TextMetrics
+TextureImage
 ThresholdMask
 TiltReading
 TiltSensor
