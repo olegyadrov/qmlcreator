@@ -100,6 +100,7 @@ border
 bottom
 bottomMargin
 boundingBox
+boundingItem
 boundingRect
 boundsBehavior
 brightness
@@ -154,6 +155,7 @@ colorTable
 colorVariation
 column
 columnCount
+columnForeground
 columnSpacing
 columnSpan
 columns
@@ -233,6 +235,7 @@ decimals
 decrementControl
 defaultButton
 defaultCamera
+delay
 delayRemove
 delegate
 denoisingLevel
@@ -354,6 +357,7 @@ footerPositioning
 foregroundSource
 format
 formats
+formatValue
 forwardTo
 fragmentShader
 frame
@@ -586,6 +590,7 @@ mediaType
 menu
 menuBar
 menuButton
+menuItems
 menuStyle
 mesh
 messageRecords
@@ -615,6 +620,7 @@ minimumValue
 minimumWidth
 minimumX
 minimumY
+minorTickmarkCount
 minorVersion
 mipmap
 mipmapLevel
@@ -855,6 +861,7 @@ selectedNameFilter
 selectedText
 selectedTextColor
 selection
+selectionAngle
 selectionColor
 selectionEnd
 selectionMode
@@ -980,8 +987,11 @@ textMargin
 textRole
 textureSize
 threshold
+tickmarkAlignment
+tickmarkStepSize
 tickmarks
 tickmarksEnabled
+tickmarksVisible
 tightBoundingRect
 tileSize
 timestamp
@@ -1000,6 +1010,7 @@ transformOrigin
 transientScrollBars
 transitions
 transparentBorder
+triggerMode
 triggeredOnStart
 truncated
 type

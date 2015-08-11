@@ -62,6 +62,7 @@ Category
 CategoryModel
 CheckBox
 CheckBoxStyle
+CircularGauge
 CloseEvent
 ColorAnimation
 ColorDialog
@@ -85,9 +86,11 @@ CoordinateAnimation
 CumulativeDirection
 CustomParticle
 Date
+DelayButton
 DelegateModel
 DelegateModelGroup
 Desaturate
+Dial
 Dialog
 Direction
 DirectionalBlur
@@ -120,6 +123,7 @@ FrameGraph
 FrameGraphNode
 Friction
 GammaAdjust
+Gauge
 GaussianBlur
 GeocodeModel
 Glow
@@ -238,6 +242,8 @@ PathQuad
 PathSvg
 PathView
 PauseAnimation
+Picture
+PieMenu
 PinchArea
 PinchEvent
 Place
@@ -328,6 +334,7 @@ StateChangeScript
 StateGroup
 StatusBar
 StatusBarStyle
+StatusIndicator
 String
 Supplier
 Switch
@@ -356,6 +363,7 @@ ThresholdMask
 TiltReading
 TiltSensor
 Timer
+ToggleButton
 ToolBar
 ToolBarStyle
 ToolButton
@@ -365,6 +373,8 @@ TrailEmitter
 Transform
 Transition
 Translate
+Tumbler
+TumblerColumn
 Turbulence
 UniformAnimator
 User
