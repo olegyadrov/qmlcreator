@@ -18,6 +18,7 @@
 
 import QtQuick 2.5
 import QtQuick.Layouts 1.2
+import ProjectManager 1.1
 import "../components"
 
 BlankScreen {
@@ -36,7 +37,7 @@ BlankScreen {
             CBackButton {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                text: projectManager.fileName
+                text: ProjectManager.fileName
             }
 
             CToolButton {
@@ -64,13 +65,13 @@ BlankScreen {
             }
 
             CToolButton {
-                visible: projectManager.fileFormat === "qml" && !codeArea.selectedText.length > 0
+                visible: ProjectManager.fileFormat === "qml" && !codeArea.selectedText.length > 0
                 Layout.fillHeight: true
                 icon: "\uf04b"
                 tooltipText: qsTr("Run")
                 onClicked: {
-                    projectManager.saveFileContent(codeArea.text)
-                    projectManager.clearComponentCache()
+                    ProjectManager.saveFileContent(codeArea.text)
+                    ProjectManager.clearComponentCache()
                     Qt.inputMethod.hide()
                     stackView.push(Qt.resolvedUrl("PlaygroundScreen.qml"))
                 }
@@ -82,7 +83,7 @@ BlankScreen {
         id: codeArea
 
         Component.onDestruction: {
-            projectManager.saveFileContent(text)
+            ProjectManager.saveFileContent(text)
         }
 
         anchors.top: toolBar.bottom
@@ -92,6 +93,6 @@ BlankScreen {
 
         indentSize: settings.indentSize
 
-        text: projectManager.getFileContent()
+        text: ProjectManager.getFileContent()
     }
 }

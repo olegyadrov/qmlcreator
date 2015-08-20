@@ -19,6 +19,7 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.2
+import ProjectManager 1.1
 import "../components"
 
 BlankScreen {
@@ -26,7 +27,7 @@ BlankScreen {
 
     Stack.onStatusChanged: {
         if (Stack.status === Stack.Activating)
-            listView.model = projectManager.files()
+            listView.model = ProjectManager.files()
     }
 
     CToolBar {
@@ -42,7 +43,7 @@ BlankScreen {
             CBackButton {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                text: projectManager.projectName
+                text: ProjectManager.projectName
             }
 
             CToolButton {
@@ -56,8 +57,8 @@ BlankScreen {
 
                     var callback = function(value)
                     {
-                        projectManager.createFile(value.fileName, value.fileExtension)
-                        listView.model = projectManager.files()
+                        ProjectManager.createFile(value.fileName, value.fileExtension)
+                        listView.model = ProjectManager.files()
                     }
 
                     dialog.open(dialog.types.newFile, parameters, callback)
@@ -78,7 +79,7 @@ BlankScreen {
             removeButtonVisible: modelData !== "main.qml"
 
             onClicked: {
-                projectManager.fileName = modelData
+                ProjectManager.fileName = modelData
                 stackView.push(Qt.resolvedUrl("EditorScreen.qml"))
             }
 
@@ -92,8 +93,8 @@ BlankScreen {
                 {
                     if (value)
                     {
-                        projectManager.removeFile(modelData)
-                        listView.model = projectManager.files()
+                        ProjectManager.removeFile(modelData)
+                        listView.model = ProjectManager.files()
                     }
                 }
 

@@ -72,6 +72,9 @@ public:
     static void setQmlEngine(QQmlApplicationEngine *engine);
     Q_INVOKABLE void clearComponentCache();
 
+    // singleton type provider function
+    static QObject *projectManagerProvider(QQmlEngine *engine, QJSEngine *scriptEngine);
+
 private:
     // project management
     BaseFolder m_baseFolder;

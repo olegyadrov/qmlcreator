@@ -21,6 +21,7 @@ import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Window 2.2
 import Qt.labs.settings 1.0
+import ProjectManager 1.1
 import "palettes"
 
 ApplicationWindow {
@@ -51,7 +52,7 @@ ApplicationWindow {
         var previousVersion = parseInt(settings.previousVersion.split(".").join(""))
         if (previousVersion === 0)
         { // first run
-            projectManager.restoreExamples()
+            ProjectManager.restoreExamples()
             settings.previousVersion = Qt.application.version
         }
         else
@@ -70,7 +71,7 @@ ApplicationWindow {
                 var callback = function(value)
                 {
                     if (value)
-                        projectManager.restoreExamples()
+                        ProjectManager.restoreExamples()
 
                     settings.previousVersion = Qt.application.version
                 }

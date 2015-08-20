@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     translator.load("qmlcreator_" + QLocale::system().name(), ":/resources/translations");
     app.installTranslator(&translator);
 
-    qmlRegisterType<ProjectManager>("ProjectManager", 1, 1, "ProjectManager");
+    qmlRegisterSingletonType<ProjectManager>("ProjectManager", 1, 1, "ProjectManager", &ProjectManager::projectManagerProvider);
     qmlRegisterType<SyntaxHighlighter>("SyntaxHighlighter", 1, 1, "SyntaxHighlighter");
 
     QQmlApplicationEngine engine(QUrl("qrc:/qml/main.qml"));

@@ -19,6 +19,7 @@
 import QtQuick 2.5
 import QtQuick.Layouts 1.2
 import QtGraphicalEffects 1.0
+import ProjectManager 1.1
 import ".."
 
 BaseDialog {
@@ -175,7 +176,7 @@ BaseDialog {
                 }
                 else
                 {
-                    if (projectManager.projectExists(projectName))
+                    if (ProjectManager.projectExists(projectName))
                     {
                         warningLabel.text = qsTr("The project already exists")
                         warningLabel.visible = true

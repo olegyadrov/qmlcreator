@@ -233,6 +233,15 @@ void ProjectManager::clearComponentCache()
     ProjectManager::m_qmlEngine->clearComponentCache();
 }
 
+QObject *ProjectManager::projectManagerProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine)
+    Q_UNUSED(scriptEngine)
+
+    ProjectManager *projectManager = new ProjectManager();
+    return projectManager;
+}
+
 QString ProjectManager::baseFolderPath(BaseFolder folder)
 {
     QString folderName;

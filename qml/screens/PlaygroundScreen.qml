@@ -18,6 +18,7 @@
 
 import QtQuick 2.5
 import QtQuick.Layouts 1.2
+import ProjectManager 1.1
 import "../components"
 
 BlankScreen {
@@ -33,7 +34,7 @@ BlankScreen {
         CBackButton {
             anchors.fill: parent
             enabled: !stackView.busy
-            text: projectManager.fileName
+            text: ProjectManager.fileName
         }
     }
 
@@ -55,7 +56,7 @@ BlankScreen {
     }
 
     Component.onCompleted: {
-        var componentUrl = projectManager.getFilePath()
+        var componentUrl = ProjectManager.getFilePath()
         var playComponent = Qt.createComponent(componentUrl, Component.PreferSynchronous, playgroundScreen)
         if (playComponent.status === Component.Error)
         {

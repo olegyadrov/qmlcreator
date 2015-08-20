@@ -17,6 +17,7 @@
 ****************************************************************************/
 
 import QtQuick 2.5
+import ProjectManager 1.1
 import SyntaxHighlighter 1.1
 
 Item {
@@ -245,9 +246,9 @@ Item {
 
             Component.onCompleted: {
                 syntaxHighlighter.setHighlighter(textEdit)
-                if (projectManager.project !== "") {
+                if (ProjectManager.project !== "") {
                     // add custom components
-                    var files = projectManager.files()
+                    var files = ProjectManager.files()
                     for (var i = 0; i < files.length; i++) {
                         var filename = files[i].split(".")
                         if (filename[0] !== "main") {

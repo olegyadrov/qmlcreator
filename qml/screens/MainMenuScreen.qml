@@ -55,7 +55,7 @@ BlankScreen {
                 text: qsTr("PROJECTS")
                 icon: "\uf0f6"
                 onClicked: {
-                    projectManager.baseFolder = ProjectManager.Projects
+                    ProjectManager.baseFolder = ProjectManager.Projects
                     stackView.push(Qt.resolvedUrl("ProjectsScreen.qml"))
                 }
             }
@@ -64,7 +64,7 @@ BlankScreen {
                 text: qsTr("EXAMPLES")
                 icon: "\uf1c9"
                 onClicked: {
-                    projectManager.baseFolder = ProjectManager.Examples
+                    ProjectManager.baseFolder = ProjectManager.Examples
                     stackView.push(Qt.resolvedUrl("ExamplesScreen.qml"))
                 }
             }

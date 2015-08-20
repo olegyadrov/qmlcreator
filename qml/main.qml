@@ -18,7 +18,6 @@
 
 import QtQuick 2.5
 import QtQuick.Controls 1.4
-import ProjectManager 1.1
 import "components"
 import "components/dialogs"
 import "screens"
@@ -54,9 +53,5 @@ CApplicationWindow {
 
     CTooltip {
         id: tooltip
-    }
-
-    ProjectManager {
-        id: projectManager
     }
 }

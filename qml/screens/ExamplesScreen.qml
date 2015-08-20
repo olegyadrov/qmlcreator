@@ -19,6 +19,7 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.2
+import ProjectManager 1.1
 import "../components"
 
 BlankScreen {
@@ -26,7 +27,7 @@ BlankScreen {
 
     Stack.onStatusChanged: {
         if (Stack.status === Stack.Activating)
-            listView.model = projectManager.projects()
+            listView.model = ProjectManager.projects()
     }
 
     CToolBar {
@@ -59,8 +60,8 @@ BlankScreen {
                     {
                         if (value)
                         {
-                            projectManager.restoreExamples()
-                            listView.model = projectManager.projects()
+                            ProjectManager.restoreExamples()
+                            listView.model = ProjectManager.projects()
                         }
                     }
 
@@ -80,7 +81,7 @@ BlankScreen {
         delegate: CFileButton {
             text: modelData
             onClicked: {
-                projectManager.projectName = modelData
+                ProjectManager.projectName = modelData
                 stackView.push(Qt.resolvedUrl("FilesScreen.qml"))
             }
 
@@ -94,8 +95,8 @@ BlankScreen {
                 {
                     if (value)
                     {
-                        projectManager.removeProject(modelData)
-                        listView.model = projectManager.projects()
+                        ProjectManager.removeProject(modelData)
+                        listView.model = ProjectManager.projects()
                     }
                 }
 
