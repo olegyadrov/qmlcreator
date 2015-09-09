@@ -26,7 +26,7 @@
 #include <QIODevice>
 #include <QStandardPaths>
 #include <QTextStream>
-#include <QtQml/QQmlApplicationEngine>
+#include <QQmlApplicationEngine>
 
 class ProjectManager : public QObject
 {

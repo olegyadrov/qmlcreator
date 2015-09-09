@@ -12,13 +12,15 @@ RESOURCES += \
 HEADERS += \
     cpp/ProjectManager.h \
     cpp/QMLHighlighter.h \
-    cpp/SyntaxHighlighter.h
+    cpp/SyntaxHighlighter.h \
+    cpp/MessageHandler.h
 
 SOURCES += \
     cpp/main.cpp \
     cpp/ProjectManager.cpp \
     cpp/QMLHighlighter.cpp \
-    cpp/SyntaxHighlighter.cpp
+    cpp/SyntaxHighlighter.cpp \
+    cpp/MessageHandler.cpp
 
 lupdate_only {
 SOURCES += \

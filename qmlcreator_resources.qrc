@@ -161,5 +161,6 @@
         <file>qml/modules/Window.qml</file>
         <file>qml/modules/XmlListModel.qml</file>
         <file>resources/translations/qmlcreator_ru.qm</file>
+        <file>qml/components/dialogs/DebugOverlayOpacityDialog.qml</file>
     </qresource>
 </RCC>

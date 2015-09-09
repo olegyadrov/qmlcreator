@@ -21,7 +21,6 @@
 
 #include <QSyntaxHighlighter>
 #include <QTextStream>
-#include <QDebug>
 
 class QMLHighlighter : public QSyntaxHighlighter
 {

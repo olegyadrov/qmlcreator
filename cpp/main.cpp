@@ -16,15 +16,16 @@
 **
 ****************************************************************************/
 
-#include <QtGui/QGuiApplication>
-#include <QtQml/QQmlApplicationEngine>
-#include <QtQuick/QQuickTextDocument>
-#include <QtCore/QTranslator>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+#include <QTranslator>
+#include "MessageHandler.h"
 #include "ProjectManager.h"
 #include "SyntaxHighlighter.h"
 
 int main(int argc, char *argv[])
 {
+    qInstallMessageHandler(&MessageHandler::handler);
     QGuiApplication app(argc, argv);
     app.setApplicationName("QML Creator");
     app.setApplicationVersion("1.2.3");
@@ -40,6 +41,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine(QUrl("qrc:/qml/main.qml"));
     ProjectManager::setQmlEngine(&engine);
+    MessageHandler::setQmlEngine(&engine);
 
     return app.exec();
 }

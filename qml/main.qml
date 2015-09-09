@@ -54,4 +54,10 @@ CApplicationWindow {
     CTooltip {
         id: tooltip
     }
+
+    QtObject {
+        id: messageHandler
+        objectName: "messageHandler"
+        signal messageReceived(string message)
+    }
 }

@@ -46,12 +46,39 @@ BlankScreen {
         anchors.right: parent.right
         clip: true
 
-        CLabel {
-            id: errorLabel
+        Flickable {
+            id: messagesFlickable
+            z: 2
             anchors.fill: parent
-            anchors.margins: 10
-            wrapMode: Text.Wrap
-            visible: false
+            anchors.margins: 3 * settings.pixelDensity
+            contentWidth: messages.paintedWidth
+            contentHeight: messages.paintedHeight
+            enabled: false
+
+            function scrollDown() {
+                if (contentHeight > height)
+                    contentY = contentHeight - height
+            }
+
+            TextEdit {
+                id: messages
+                width: messagesFlickable.width
+                height: messagesFlickable.height
+                font.pixelSize: 6 * settings.pixelDensity
+                opacity: settings.debugOverlayOpacity
+                visible: opacity > 0
+                wrapMode: TextEdit.Wrap
+                readOnly: true
+
+                onTextChanged:
+                    messagesFlickable.scrollDown()
+            }
+        }
+
+        Connections {
+            target: messageHandler
+            onMessageReceived:
+                messages.append(message)
         }
     }
 
@@ -60,8 +87,7 @@ BlankScreen {
         var playComponent = Qt.createComponent(componentUrl, Component.PreferSynchronous, playgroundScreen)
         if (playComponent.status === Component.Error)
         {
-            errorLabel.text = playComponent.errorString()
-            errorLabel.visible = true
+            messages.append(playComponent.errorString())
         }
         else
         {
