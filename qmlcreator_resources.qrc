@@ -82,6 +82,8 @@
         <file>qml/examples/Analog Clock/main.qml</file>
         <file>qml/examples/Canvas/main.qml</file>
         <file>qml/examples/Controls/main.qml</file>
+        <file>qml/examples/Debugging/main.qml</file>
+        <file>qml/examples/Debugging/Rect.qml</file>
         <file>qml/examples/Device Info/main.qml</file>
         <file>qml/examples/Dialogs/ColorDialogTab.qml</file>
         <file>qml/examples/Dialogs/main.qml</file>
