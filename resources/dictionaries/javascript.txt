@@ -38,6 +38,7 @@ ceil
 charAt
 charCodeAt
 concat
+console
 constructor
 cos
 create
