@@ -1,4 +1,11 @@
-QT += core gui qml quick sensors sql multimedia network websockets xml svg bluetooth nfc positioning 3dcore 3drenderer 3dinput 3dquick
+QT += \
+    core gui qml quick \
+    multimedia sql \
+    network websockets \
+    xml svg \
+    sensors bluetooth nfc \
+    positioning location \
+    3dcore 3drenderer 3dinput 3dquick
 
 TARGET = qmlcreator
 TEMPLATE = app

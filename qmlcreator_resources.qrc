@@ -23,6 +23,7 @@
         <file>qml/main.qml</file>
         <file>qml/components/dialogs/BaseDialog.qml</file>
         <file>qml/components/dialogs/ConfirmationDialog.qml</file>
+        <file>qml/components/dialogs/DebugOverlayOpacityDialog.qml</file>
         <file>qml/components/dialogs/DialogLoader.qml</file>
         <file>qml/components/dialogs/FontFamilyDialog.qml</file>
         <file>qml/components/dialogs/FontSizeDialog.qml</file>
@@ -105,6 +106,7 @@
         <file>qml/examples/Looped List View/LoopedListViewDelegate.qml</file>
         <file>qml/examples/Looped List View/main.qml</file>
         <file>qml/examples/Looped List View/NumberSelector.qml</file>
+        <file>qml/examples/Map/main.qml</file>
         <file>qml/examples/Multi-touch/main.qml</file>
         <file>qml/examples/Multi-touch/TouchItem.qml</file>
         <file>qml/examples/Camera/main.qml</file>
@@ -163,6 +165,5 @@
         <file>qml/modules/Window.qml</file>
         <file>qml/modules/XmlListModel.qml</file>
         <file>resources/translations/qmlcreator_ru.qm</file>
-        <file>qml/components/dialogs/DebugOverlayOpacityDialog.qml</file>
     </qresource>
 </RCC>
