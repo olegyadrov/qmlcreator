@@ -33,7 +33,10 @@ lupdate_only {
 SOURCES += \
     qml/components/*.qml \
     qml/components/dialogs/*.qml \
-    qml/screens/*.qml
+    qml/components/palettes/*.qml \
+    qml/modules/*.qml \
+    qml/screens/*.qml \
+    qml/*.qml
 }
 
 android {
