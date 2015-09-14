@@ -120,28 +120,11 @@ BlankScreen {
             }
 
             CSettingButton {
-                text: qsTr("Debug overlay opacity")
-                description: settings.debugOverlayOpacity.toFixed(2).toString()
+                text: qsTr("Debugging")
+                description: settings.debugging ? qsTr("Enabled") : qsTr("Disabled")
 
                 onClicked: {
-                    var parameters = {
-                        title: qsTr("Debug overlay opacity"),
-                        text: "Preview",
-                        minOpacity: 0,
-                        maxOpacity: 1,
-                        currentOpacity: settings.debugOverlayOpacity
-                    }
-
-                    var callback = function(value) {
-                        if (value < parameters.minOpacity)
-                            settings.debugOverlayOpacity = parameters.minOpacity;
-                        else if (value > parameters.maxOpacity)
-                            settings.debugOverlayOpacity = parameters.maxOpacity;
-                        else
-                            settings.debugOverlayOpacity = value;
-                    }
-
-                    dialog.open(dialog.types.debugOverlayOpacity, parameters, callback)
+                    settings.debugging = !settings.debugging
                 }
             }
 

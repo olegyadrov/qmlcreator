@@ -23,7 +23,6 @@
         <file>qml/main.qml</file>
         <file>qml/components/dialogs/BaseDialog.qml</file>
         <file>qml/components/dialogs/ConfirmationDialog.qml</file>
-        <file>qml/components/dialogs/DebugOverlayOpacityDialog.qml</file>
         <file>qml/components/dialogs/DialogLoader.qml</file>
         <file>qml/components/dialogs/FontFamilyDialog.qml</file>
         <file>qml/components/dialogs/FontSizeDialog.qml</file>

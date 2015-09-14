@@ -90,7 +90,7 @@ ApplicationWindow {
         property int fontSize: 40
         property string palette: "Cute"
         property int indentSize: 4
-        property double debugOverlayOpacity: 0.3
+        property bool debugging: true
 
         // internal
         property bool debugMode: false
@@ -108,7 +108,7 @@ ApplicationWindow {
         property alias fontSize: settings.fontSize
         property alias palette: settings.palette
         property alias indentSize: settings.indentSize
-        property alias debugOverlayOpacity: settings.debugOverlayOpacity
+        property alias debugging: settings.debugging
     }
 
     Settings {

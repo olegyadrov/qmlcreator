@@ -31,10 +31,26 @@ BlankScreen {
         anchors.right: parent.right
         anchors.top: parent.top
 
-        CBackButton {
+        RowLayout {
             anchors.fill: parent
-            enabled: !stackView.busy
-            text: ProjectManager.fileName
+            spacing: 0
+
+            CBackButton {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                enabled: !stackView.busy
+                text: ProjectManager.fileName
+            }
+
+            CToolButton {
+                Layout.fillHeight: true
+                icon: "\uf188"
+                tooltipText: settings.debugging ? qsTr("Disable debugging") : qsTr("Enable debugging")
+                checked: settings.debugging
+                onClicked: {
+                    settings.debugging = !settings.debugging
+                }
+            }
         }
     }
 
@@ -64,9 +80,10 @@ BlankScreen {
                 id: messages
                 width: messagesFlickable.width
                 height: messagesFlickable.height
+                visible: settings.debugging
+                color: palette.editorNormal
+                opacity: 0.3
                 font.pixelSize: 6 * settings.pixelDensity
-                opacity: settings.debugOverlayOpacity
-                visible: opacity > 0
                 wrapMode: TextEdit.Wrap
                 readOnly: true
 

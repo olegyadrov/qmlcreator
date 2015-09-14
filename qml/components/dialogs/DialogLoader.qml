@@ -37,7 +37,6 @@ Loader {
         property string fontFamily: "FontFamilyDialog.qml"
         property string fontSize: "FontSizeDialog.qml"
         property string indentSize: "IndentSizeDialog.qml"
-        property string debugOverlayOpacity: "DebugOverlayOpacityDialog.qml"
         property string newFile: "NewFileDialog.qml"
         property string newProject: "NewProjectDialog.qml"
     }

@@ -26,6 +26,7 @@ Item {
     implicitHeight: 22 * settings.pixelDensity
     property alias icon: buttonIcon.text
     property string tooltipText
+    property bool checked: false
 
     signal clicked()
 
@@ -33,6 +34,15 @@ Item {
         anchors.fill: parent
         color: palette.button
         visible: mouseArea.pressed
+    }
+
+    Rectangle {
+        anchors.centerIn: parent
+        width: parent.width * 0.7
+        height: width
+        radius: width / 2
+        color: palette.button
+        visible: cToolButton.checked
     }
 
     CIcon {
