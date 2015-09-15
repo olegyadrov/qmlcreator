@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<manifest package="com.wearyinside.qmlcreator" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.2.3" android:versionCode="21" android:installLocation="auto">
+<manifest package="com.wearyinside.qmlcreator" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.2.4" android:versionCode="22" android:installLocation="auto">
     <application android:label="QML Creator" android:hardwareAccelerated="true" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:icon="@drawable/icon">
         <activity android:label="QML Creator" android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|locale|fontScale|keyboard|keyboardHidden|navigation" android:name="org.qtproject.qt5.android.bindings.QtActivity" android:screenOrientation="unspecified" android:launchMode="singleTop">
             <intent-filter>
