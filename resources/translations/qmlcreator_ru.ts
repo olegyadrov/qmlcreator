@@ -244,6 +244,17 @@
     </message>
 </context>
 <context>
+    <name>PlaygroundScreen</name>
+    <message>
+        <source>Disable debugging</source>
+        <translation>Выключить отладку</translation>
+    </message>
+    <message>
+        <source>Enable debugging</source>
+        <translation>Включить отладку</translation>
+    </message>
+</context>
+<context>
     <name>ProjectsScreen</name>
     <message>
         <source>Projects</source>
@@ -287,6 +298,20 @@
     <message>
         <source>Editor font</source>
         <translation>Шрифт</translation>
+    </message>
+    <message>
+        <source>Debugging</source>
+        <translation>Отладка</translation>
+    </message>
+    <message>
+        <source>Enabled</source>
+        <translatorcomment>В женском роде (отладка)</translatorcomment>
+        <translation>Включена</translation>
+    </message>
+    <message>
+        <source>Disabled</source>
+        <translatorcomment>В женском роде (отладка)</translatorcomment>
+        <translation>Выключена</translation>
     </message>
 </context>
 </TS>

@@ -39,6 +39,8 @@ SOURCES += \
     qml/*.qml
 }
 
+TRANSLATIONS = resources/translations/qmlcreator_ru.ts
+
 android {
     OTHER_FILES += platform-specific/android/AndroidManifest.xml
     ANDROID_PACKAGE_SOURCE_DIR = $$PWD/platform-specific/android
