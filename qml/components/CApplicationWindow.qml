@@ -127,6 +127,16 @@ ApplicationWindow {
 
     property alias palette: paletteLoader.palette
 
+    // Message Handler
+
+    QtObject {
+        id: messageHandler
+        objectName: "messageHandler"
+        signal messageReceived(string message)
+    }
+
+    property alias messageHandler: messageHandler
+
     // Focus Management
 
     property Item focusItem: null
@@ -153,6 +163,8 @@ ApplicationWindow {
             event.accepted = true
         }
     }
+
+    // Editor Fonts
 
     property ListModel editorFonts: ListModel {
         ListElement {
