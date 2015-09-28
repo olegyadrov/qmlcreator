@@ -17,7 +17,6 @@
 ****************************************************************************/
 
 import QtQuick 2.5
-import QtQuick.Layouts 1.2
 import QtGraphicalEffects 1.0
 import ProjectManager 1.1
 import ".."

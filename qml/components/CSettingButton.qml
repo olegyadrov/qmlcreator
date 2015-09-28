@@ -17,7 +17,6 @@
 ****************************************************************************/
 
 import QtQuick 2.5
-import QtQuick.Layouts 1.2
 
 Item {
     id: cSettingButton
@@ -53,14 +52,14 @@ Item {
 
         CLabel {
             id: buttonLabel
-            Layout.fillWidth: true
-            Layout.fillHeight: true
+            anchors.left: parent.left
+            anchors.right: parent.right
         }
 
         CLabel {
             id: descriptionLabel
-            Layout.fillWidth: true
-            Layout.fillHeight: true
+            anchors.left: parent.left
+            anchors.right: parent.right
             font.pixelSize: 5 * settings.pixelDensity
             color: palette.description
         }
